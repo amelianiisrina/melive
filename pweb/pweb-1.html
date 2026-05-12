@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Web Profile</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            .card {
+                border-radius: 0;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+
+            code {
+                background-color: #f8f9fa;
+                padding: 2px 8px;
+                border-radius: 6px;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 0.9em;
+                color: #fb6f92;
+                display: inline-block;
+            }
+
+            .laprak {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin-bottom: 16px;
+                display: block;
+            }
+
+            h3 {
+                font-size: 28px;
+                font-family: 'Times New Roman';
+                font-weight: bold;
+            }
+
+            .btn-pink {
+                background-color: #f7a0b8;
+                color: white;
+                border: none;
+            }
+
+            .btn-pink:hover {
+                background-color: #ea7ea3;
+                color: white;
+            }
+            
+        </style>
+    </head>
+
+    <body style="min-height: 100vh; display: flex; flex-direction: column;">
+            <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #ffe9ef;">
+                <div class="container">
+                    <div class="navbar-brand d-flex align-items-center">
+                        <img src="../images/logo.png" alt="logo" width="40" class="me-2">
+                        <span>Laporan Praktikum 1</span>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navMenu">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="portofolio.html">Projects</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="report.html">Report</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <header class="text-center py-5" style="background-color: #ffe9ef; font-family: 'Times New Roman', serif;">
+                <h1>Laporan Praktikum 1</h1>
+                <p>Pemrograman Web - Konfigurasi Laravel</p>
+            </header>
+
+            <section style="background: linear-gradient(180deg, #ffe9ef, #ffffff);">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+                        <div class="col-1"></div>
+
+                        <div class="col-10">
+                            <section id="content" class="py-4">
+                                <div id="pendahuluan" class="card mb-4">
+                                    <div class="card-body">
+                                        <h3>A. Pendahuluan</h3>
+                                        <p>Laravel adalah salah satu framework PHP yang populer dan digunakan untuk mempermudah
+                                            proses pengembangan aplikasi berbasis web. Framework ini menyediakan berbagai fitur
+                                            seperti routing yang membantu pengembang dalam membangun aplikasi secara lebih
+                                            terstruktur, efisien, dan aman.
+                                        </p>
+                                        <p>Pada praktikum ini, dilakukan proses konfigurasi awal Laravel sebagai langkah awal
+                                            dalam pengembangan website lebih lanjut. Konfigurasi ini meliputi instalasi Laravel,
+                                            pembuatan project pada direktori lokal, dan menjalankan server lokal.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div id="tujuan" class="card mb-4">
+                                    <div class="card-body">
+                                        <h3>B. Tujuan</h3>
+                                        <ul>
+                                            <li>Mampu melakukan instalasi Laravel</li>
+                                            <li>Mampu membuat project baru Laravel</li>
+                                            <li>Mampu memahami struktur dasar framework Laravel</li>
+                                            <li>Mampu memahami konsep MVC (Model-View-Controller)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div id="alat" class="card mb-4">
+                                    <div class="card-body">
+                                        <h3>C. Alat dan Tools yang Digunakan</h3>
+                                        <ul>
+                                            <li>Laptop</li>
+                                            <li>VS Code</li>
+                                            <li>Laragon</li>
+                                            <li>Composer, Git, Node JS, dan NPM</li>
+                                            <li>GitHub</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div id="langkah" class="card mb-4">
+                                    <div class="card-body">
+                                        <h3>D. Langkah Kerja</h3>
+                                        <p>Pada langkah pengerjaan, dilakukan proses persiapan dan konfigurasi awal Laravel.
+                                        </p>
+                                        <ol>
+                                            <li>Requirement Tools
+                                                <p>Dilakukan pengecekan versi php, Git, Node JS, NPM, dan Composer. Hal ini 
+                                                    perlu dilakukan untuk memastikan bahwa tools sudah sesuai dengan requirement.
+                                                </p>
+                                                <img src="../images/gambar30.png" class="laprak" alt="Requirement Tools">
+                                            </li>
+                                            <li>Membuat Project Laravel
+                                                <p>Setelah melakukan pengecekan, buat project Laravel menggunakan perintah <code>composer 
+                                                    create-project laravel/laravel=^12 PWEB24 --prefer-dist</code> lalu klik enter.
+                                                </p>
+                                                <p>Setelah project berhasil dibuat, akan muncul tampilan seperti berikut ini.</p>
+                                                <img src="../images/gambar31.png" class="laprak" alt="Project Laravel">
+                                            </li>
+                                            <li>Masuk ke Folder Project
+                                                <p>Setelah project berhasil dibuat, buka folder project yang telah dibuat
+                                                    sebelumnya pada aplikasi VS Code.
+                                                </p>
+                                            </li>
+                                            <li>Running Project Laravel
+                                                <p>Jalankan server lokal dengan mengetik perintah <code>php artisan serve</code>. 
+                                                    Jika perintah berhasil, akan muncul alamat server lokal Laravel yaitu <u>http://127.0.0.1:8000</u>. Tampilan laman 
+                                                    awal akan terlihat seperti berikut.
+                                                </p>
+                                                <img src="../images/gambar32.png" class="laprak" alt="Running Project">
+                                            </li>
+                                            <li>Test Routing</li>
+                                                <p>Buka file web.php pada folder routes, lalu tambahkan kode routing seperti berikut.</p>
+                                                <img src="../images/gambar33.png" class="laprak" alt="Routing Awal">
+                                                <p>Pada alamat server lokal Laravel, tambahkan <code>/helo</code> kemudian run. Jika routing berhasil, maka akan muncul
+                                                    tampilan seperti berikut.</p>
+                                                <img src="../images/gambar34.png" class="laprak" alt="Hello World"> 
+                                            </li>
+                                        </ol>
+                                    </div>   
+                                </div>
+
+                                <div id="tantangan" class="card mb-4">
+                                    <div class="card-body">
+                                        <h3>E. Tugas</h3>
+                                        <ol>
+                                            <li>Buat controller dengan nama <code>UserController</code>.
+                                                <p>Pada terminal, ketik perintah <code>php artisan make:controller UserController</code>. Jika berhasil, maka file akan 
+                                                    muncul di path <code>app/Http/Controllers/UserController.php</code>.
+                                                </p>
+                                            </li>
+                                            <li>Buat function dengan nama <code>index</code>.
+                                                <p>Buka file <code>UserController.php</code> lalu buat function seperti berikut ini.</p>
+                                                <img src="../images/gambar35.png" class="laprak" alt="Function Index">
+                                            </li>
+                                            <li>Buat view di dalam folder resources/views dengan nama <code>index</code>.
+                                                <p>Buka folder <code>resources/views</code> kemudian buat folder baru dengan nama <code>user</code>. Di dalam folder, 
+                                                    buat file dengan nama <code>index.blade.php</code>. Isi dengan HTML sederhana seperti berikut.
+                                                </p>
+                                                <img src="../images/gambar36.png" class="laprak" alt="View">
+                                            </li>
+                                            <li>Buat routing/user untuk menampilkan view
+                                                <p>Buka file <code>routes/web.php</code>. Tambahkan kode berikut pada file tersebut.
+                                                </p>
+                                                <img src="../images/gambar37.png" class="laprak" alt="Routing /user">
+                                            </li>
+                                            <li>Jalankan project
+                                                <p>Buka <u>http://127.0.0.1:8000/user</u>. Jika berhasil, akan muncul tampilan seperti berikut.
+                                                </p>
+                                                <img src="../images/gambar38.png" class="laprak" alt="Tampilan HTML">
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div> 
+
+                                <div id="kesimpulan" class="card mb-4">
+                                    <div class="card-body">
+                                        <h3>F. Kesimpulan</h3>
+                                        <p>Dari praktikum ini, telah dilakukan proses instalasi, konfigurasi environment, serta pembuatan project pada localhost. 
+                                            Selain itu, praktikum ini juga memberikan pemahaman mengenai struktur dasar Laravel dan penerapan konsep MVC melalui
+                                            proses routing, controller, dan view dalam pengembangan aplikasi web.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div id="github" class="card mb-4">
+                                    <div class="card-body">
+                                        <h3>G. Repository Github</h3>
+                                        <p>Kode project dapat diakses melalui repository Github berikut.</p>
+                                        <a href="https://github.com/amelianiisrina/melive" class="btn btn-pink">
+                                            <i class="bi bi-github me-2"></i> Buka Github
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="footer" class="mt-5 pt-4" style="background: linear-gradient(180deg, #ffffff, #d5e8ff);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5>Niisrina Amelia</h5>
+                            <p>A computer science student who loves trying out new things and exploring creative ideas. Based in Padang, Indonesia.</p>
+                            <p>&copy; 2025 Niisrina Amelia. All rights reserved.</p>
+                        </div>
+
+                        <div class="col-6">
+                            <h5 class="text-center mb-4">Contact</h5>
+                            <div class="row">
+                                <div class="col-3 d-flex justify-content-center align-items-center">
+                                    <a href="https://www.instagram.com/mellll.ia?igsh=ODRmOW8xZ2VuMGZ5" target="_blank" style="text-decoration: none;">
+                                        <i class="bi bi-instagram" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center align-items-center">
+                                    <a href="https://id.linkedin.com/in/niisrina-amelia-41481531b" target="_blank" style="text-decoration: none;">
+                                        <i class="bi bi-linkedin" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center align-items-center">
+                                    <a href="mailto:amelianiisrina@gmail.com" style="text-decoration: none;">
+                                        <i class="bi bi-envelope-at" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center align-items-center">
+                                    <a href="https://discordapp.com/users/1295724095627067434" style="text-decoration: none;">
+                                        <i class="bi bi-discord" style="font-size: 40px"></i>
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </section>
