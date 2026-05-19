@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Web Profile</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../CSS/custom.css">
+        <link rel="stylesheet" href="../CSS/report.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/animation.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <div class="navbar-brand d-flex align-items-center gap-2">
+                <img src="../images/logo.png" alt="logo" width="40" class="me-2">
+                <span>Laporan Praktikum 2</span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../portofolio.html">Projects</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../report.html">Report</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+        <header class="laprak-header text-center">
+            <div class="position-relative" style="z-index:1">
+                <div class="hero-badge">Pemrograman Web</div>
+                <h1>Laporan Praktikum 2</h1>
+                <p>Implementasi CRUD pada Framework Laravel</p>
+            </div>
+        </header>
+
+    <!-- Konten Utama -->
+        <section class="content-section">
+            <div class="container">
+                <div class="row g-4">
+
+                <!-- Daftar Isi -->
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="toc-sticky">
+                            <div class="toc-card">
+                                <div class="toc-title"><i class="bi bi-journal-bookmark-fill me-2" style="color:var(--rose-accent)"></i>Daftar Isi</div>
+                                <a class="toc-link" href="#pendahuluan">
+                                    <i class="bi bi-chevron-right"></i>A. Pendahuluan</a>
+                                <a class="toc-link" href="#tujuan">
+                                    <i class="bi bi-chevron-right"></i>B. Tujuan Praktikum</a>
+                                <a class="toc-link" href="#tools">
+                                    <i class="bi bi-chevron-right"></i>C. Alat & Tools</a>
+                                <a class="toc-link" href="#langkah">
+                                    <i class="bi bi-chevron-right"></i>D. Langkah Kerja</a>
+                                <a class="toc-link" href="#tugas">
+                                    <i class="bi bi-chevron-right"></i>E. Tugas</a>
+                                <a class="toc-link" href="#kesimpulan">
+                                    <i class="bi bi-chevron-right"></i>F. Kesimpulan</a>
+                                <a class="toc-link" href="#github">
+                                    <i class="bi bi-chevron-right"></i>G. Repository Github</a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Materi -->
+                <div class="col-lg-9">
+
+                    <!-- A. Pendahuluan -->
+                    <div class="laprak-card fade-up" id="pendahuluan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">A</div>
+                            <h3>Pendahuluan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Praktikum ini membahas pengembangan aplikasi web modern berbasis framework PHP dengan menerapkan
+                                konsep MVC (Model-View-Controller). Laravel menyediakan berbagai fitur seperti migration, 
+                                routing, model, controller, dan view yang membantu proses pengelolaan database serta pembuatan
+                                sistem CRUD menjadi lebih terstruktur dan efisien.
+                            </p>
+                            <p>Pada praktikum ke-7 ini, mahasiswa mempelajari komponen inti Laravel yaitu <strong>Migration</strong>
+                                untuk mendefinisikan struktur tabel pada database seperti kolom dan tipe datanya. <strong>Seeding</strong>
+                                berfungsi untuk mengisi data awal atau data dummy ke dalam database agar dapat digunakan untuk
+                                pengujian aplikasi. <strong>Routing</strong> digunakan untuk mengatur alamat URL dan menghubungkannya
+                                dengan controller yang sesuai. <strong>Model</strong> berfungsi sebagai penghubung antara aplikasi 
+                                dengan database, seperti mengambil, menyimpan, dan mengelola data. <strong>Controller</strong> berperan
+                                sebagai pengatur logika program yang mengolah permintaan dari user, memproses data melalui model, kemudian
+                                mengarahkan ke view. <strong>View</strong> merupakan bagian yang menampilkan antarmuka pengguna seperti 
+                                form dan tabel data. Keseluruhan komponen tersebut dapat diintegrasikan dalam pembuatan aplikasi CRUD sederhana.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- B. Tujuan -->
+                    <div class="laprak-card fade-up" id="tujuan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">B</div>
+                            <h3>Tujuan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="row g-3 mb-2">
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-gear me-2" style="color:var(--rose-accent)"></i>Alur Pengembangan</h6>
+                                    <p>Mampu memahami struktur dan alur kerja Laravel sebagai salah satu framework yang banyak digunakan
+                                        dalam pengembangan aplikasi web.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-database me-2" style="color:var(--rose-accent)"></i>Manajemen Database</h6>
+                                    <p>Mampu mengelola database menggunakan <strong>Migration</strong> dan <strong>Seeding</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-2">
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-signpost-split me-2" style="color:var(--rose-accent)"></i>Routing Aplikasi</h6>
+                                    <p>Mampu membuat dan mengatur <strong>Routing</strong> aplikasi termasuk routing parameter, named route, dan route group.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                        <h6><i class="bi bi-box me-2" style="color:var(--rose-accent)"></i>Model Eloquent</h6>
+                                        <p>Mampu membangun <strong>Model</strong> untuk interaksi data dengan database menggunakan Eloquent ORM Laravel.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-2">
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-layout-text-window me-2" style="color:var(--rose-accent)"></i>Model & Controller</h6>
+                                    <p>Mampu mengembangkan <strong>Controller</strong> sebagai penghubung Model-View dan membuat tampilan menggunakan Blade Template.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                        <h6><i class="bi bi-arrow-repeat me-2" style="color:var(--rose-accent)"></i>Implementasi CRUD</h6>
+                                        <p>Mampu mengimplementasikan semua konsep dalam bentuk aplikasi CRUD sederhana sebagai dasar untuk pengembangan website tingkat lanjut.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- C. Tools -->
+                    <div class="laprak-card fade-up" id="tools">
+                        <div class="card-header-custom">
+                            <div class="section-letter">C</div>
+                            <h3>Alat dan Tools yang Digunakan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="pill-list">
+                                <div class="pill"><i class="bi bi-laptop"></i>Laptop</div>
+                                <div class="pill"><i class="bi bi-server"></i>XAMPP</div>
+                                <div class="pill"><i class="bi bi-code-slash"></i>VS Code</div>
+                                <div class="pill"><i class="bi bi-puzzle"></i>Composer</div>
+                                <div class="pill"><i class="bi bi-git"></i>GIT</div>
+                                <div class="pill"><i class="bi bi-cpu"></i>Node JS</div>
+                                <div class="pill"><i class="bi bi-box"></i>NPM</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- D. Langkah Kerja -->
+                    <div class="laprak-card fade-up" id="langkah">
+                        <div class="card-header-custom">
+                            <div class="section-letter">D</div>
+                            <h3>Langkah Kerja</h3>
+                        </div>
+                        <div class="card-body-custom step-content">
+
+                            <!-- Konfigurasi DB -->
+                            <h5><i class="bi bi-gear me-2" style="color:var(--rose-accent)"></i>1. Konfigurasi Database</h5>
+                            <p>Buka file <strong>.env</strong> lalu ubah konfigurasi database sebagai berikut.</p>
+                            <img src="../images/gambar39.png" class="laprak-img" alt="database">
+
+                            <!-- Migration -->
+                            <h5><i class="bi bi-database-up me-2" style="color:var(--rose-accent)"></i>2. Migration</h5>
+                            <p>Migration adalah fitur Laravel yang digunakan untuk membuat dan mengelola struktur database menggunakan
+                                kode program. Migration memudahkan developer dalam membuat tabel, mengubah struktur tabel, menghapus
+                                tabel, dan versioning database.
+                            </p>
+                            <p>Untuk membuat tabel products, kita menggunakan migration: <code>php artisan make:migration 
+                                create_products_table</code>.
+                            </p>
+                            <p>File migration akan berada pada folder <code>database/migrations</code>. Lalu tambahkan perintah pada 
+                                file tersebut seperti berikut.
+                            </p>
+                            <img src="../images/gambar40.png" class="laprak-img" alt="migration">
+                            <p>Jalankan migration dengan perintah <code>php artisan migrate</code>.</p>
+                            <div class="callout">
+                                <strong>Rollback:</strong><code>php artisan migrate:rollback </code>digunakan untuk membatalkan migration,
+                                dan <code>php artisan migrate:fresh</code> digunakan untuk menjalankan ulang seluruh migration.
+                            </div>
+
+                            <!-- Seeding -->
+                            <h5><i class="bi bi-table me-2" style="color:var(--rose-accent)"></i>3. Migration</h5>
+                            <p>Seeding digunakan untuk mengisi data awal ke database. Seeder sangat membantu dalam pengujian aplikasi, 
+                                pembuatan data dummy, dan untuk menyiapkan data awal sistem.
+                            </p>
+                            <p>Untuk membuat seeder, kita menggunakan perintah: <code>php artisan make:seeder
+                                ProductSeeder</code>.
+                            </p>
+                            <p>File seeder akan berada pada folder <code>database/seeders</code>. Buka file <strong>ProductSeeder.php</strong> lalu ubah
+                                menjadi:
+                            </p>
+                            <img src="../images/gambar41.png" class="laprak-img" alt="seeding">
+                            <p>Tambahkan pemanggilan seeder pada file <strong>DatabaseSeeder.php</strong> seperti berikut.</p>
+                            <img src="../images/gambar42.png" class="laprak-img" alt="pemanggilan seeder">
+                            <p>Jalankan seeder dengan mennggunakan perintah: <code>php artisan db::seed</code></p>
+                            <div class="callout">
+                                Jika ingin menjalankan migration dan seeding bersamaan, gunakan perintah: <code>php artisan 
+                                    migrate:fresh --seed</code>
+                            </div>
+
+                            <!-- Routing -->
+                            <h5><i class="bi bi-signpost me-2" style="color:var(--rose-accent)"></i>4. Routing</h5>
+                            <p>Routing digunakan untuk menentukan URL dan respon yang diberikan aplikasi. Semua routing web berada pada file 
+                                <code>routes/web.php</code>.
+                            </p>
+                            <p>Terdapat beberapa jenis routing:</p>
+                            <div class="row g-3 mt-1">
+                                <div class="col-md-6">
+                                    <p style="color:var(--text-dark); margin-bottom:6px; font-weight:700;">Routing Dasar</p>
+                                    <img src="../images/gambar43.png" class="laprak-img" alt="routing dasar">
+                                </div>
+                                <div class="col-md-6">
+                                    <p style="color:var(--text-dark); margin-bottom:6px; font-weight:700;">Routing Parameter</p>
+                                    <img src="../images/gambar44.png" class="laprak-img" alt="routing parameter">
+                                </div>
+                            </div>
+                            <div class="row g-3 mt-1">
+                                <div class="col-md-6">
+                                    <p style="color:var(--text-dark); margin-bottom:6px; font-weight:700;">Named Route</p>
+                                    <img src="../images/gambar45.png" class="laprak-img" alt="named route">
+                                </div>
+                                <div class="col-md-6">
+                                    <p style="color:var(--text-dark); margin-bottom:6px; font-weight:700;">Route Group</p>
+                                    <img src="../images/gambar46.png" class="laprak-img" alt="route group">
+                                </div>    
+                            </div>
+
+                            <!-- Model -->
+                            <h5><i class="bi bi-box-seam me-2" style="color:var(--rose-accent)"></i>5. Model</h5>
+                            <p>Model digunakan untuk berinteraksi dengan database. Laravel menggunakan Eloquent ORM untuk mempermudah
+                                manipulasi data.
+                            </p>
+                            <p>Pada folder <code>App\Models</code>, buka file <strong>Product.php</strong>. Kemudian ubah seperti berikut.</p>
+                            <img src="../images/gambar47.png" class="laprak-img" alt="model Product.php">
+
+                            <!-- Controller -->
+                            <h5><i class="bi bi-cpu me-2" style="color:var(--rose-accent)"></i>6. Controller</h5>
+                            <p>Controller digunakan untuk mengatur logika aplikasi serta menjadi penghubung antara model dan view. Di dalam 
+                                controller, seluruh proses utama seperti pengolahan request dari user serta operasi CRUD diatur sebelum data 
+                                ditampilkan ke view atau disimpan ke dalam database.
+                            </p>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <p style="color:var(--text-dark); margin-bottom:6px; font-weight:700;">Menambahkan Data</p>
+                                    <img src="../images/gambar48.png" class="laprak-img" alt="create">
+                                </div>
+                                <div class="col-md-6">
+                                    <p style="color:var(--text-dark); margin-bottom:6px; font-weight:700;">Menampilkan Data</p>
+                                    <img src="../images/gambar49.png" class="laprak-img" alt="index">
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <p style="color:var(--text-dark); margin-bottom:6px; font-weight:700;">Mengubah Data</p>
+                                    <img src="../images/gambar50.png" class="laprak-img" alt="update">
+                                </div>
+                                <div class="col-md-6">
+                                    <p style="color:var(--text-dark); margin-bottom:6px; font-weight:700;">Menghapus Data</p>
+                                    <img src="../images/gambar51.png" class="laprak-img" alt="destroy">
+                                </div>
+                            </div>
+                            <p>Untuk membuat controller, kita menggunakan perintah: <code>php artisan make:controller ProductController</code>.
+                                File akan berada pada folder <code>App\Http\Controllers</code>. Buka file <strong>ProductController.php</strong>.
+                                Ubah seperti berikut.
+                            </p>
+                            <img src="../images/gambar52.png" class="laprak-img" alt="controller">
+                            <p>Untuk menghubungkan route ke controller, pada file <strong>web.php</strong> tambahkan perintah berikut.</p>
+                            <img src="../images/gambar53.png" class="laprak-img" alt="route">
+                            <p>Untuk Resource Controller, kita bisa gunakan perintah: <code>php artisan make:controller ProductController --resource</code>.</p>
+                            <p>Method yang tersedia pada Resource Controller adalah sebagai berikut.</p>
+                            <table class="laprak-table">
+                                <thead>
+                                    <tr><th>Method</th><th>Fungsi</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>index</td>
+                                        <td>Menampilkan semua data</td>
+                                    </tr>
+                                    <tr>
+                                        <td>create</td>
+                                        <td>Form untuk menambah data</td>
+                                    </tr>
+                                    <tr>
+                                        <td>store</td>
+                                        <td>Menyimpan data</td>
+                                    </tr>
+                                    <tr>
+                                        <td>show</td>
+                                        <td>Menampilkan detail data</td>
+                                    </tr>
+                                    <tr>
+                                        <td>edit</td>
+                                        <td>Form untuk mengedit data</td>
+                                    </tr>
+                                    <tr>
+                                        <td>update</td>
+                                        <td>Mengubah data</td>
+                                    </tr>
+                                    <tr>
+                                        <td>destroy</td>
+                                        <td>Menghapus data</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- View -->
+                            <h5><i class="bi bi-layout-text-window-reverse me-2" style="color:var(--rose-accent)"></i>7. View</h5>
+                            <p>View digunakan untuk menampilkan halaman kepada pengguna. Laravel menggunakan Blade Template Engine. 
+                                File view berada pada folder <code>resources/views</code>. Buat file <strong>products.blade.php</strong>,
+                                lalu buat file HTML seperti berikut.
+                            </p>
+                            <img src="../images/gambar54.png" class="laprak-img" alt="products view">
+                            <p>Untuk menampilkan view dari route, tambahkan perintah berikut pada file <strong>web.php</strong>.</p>
+                            <img src="../images/gambar55.png" class="laprak-img" alt="view ke dari route">
+
+                            <!-- Blade -->
+                            <h5><i class="bi bi-file-earmark-code me-2" style="color:var(--rose-accent)"></i>8. Blade Layout</h5>
+                            <p>Blade layout adalah fitur templating pada framework Laravel yang digunakan untuk membuat kerangka 
+                                tampilan yang dapat digunakan ulang pada banyak halaman. Dengan blade layout, kita tidak perlu menulis 
+                                bagian yang sama seperti header, navbar, footer, sidebar, dan struktur HTML dasar.
+                            </p>
+                            <p>Directive Blade yang sering digunakan:</p>
+                            <table class="laprak-table">
+                                <thead>
+                                    <tr><th>Directive</th><th>Fungsi</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>@extends</td>
+                                        <td>Menggunakan layout</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@section</td>
+                                        <td>Membuat section</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@yield</td>
+                                        <td>Menampilkan section</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@include</td>
+                                        <td>Memanggil file lain</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>Buat folder layout dalam <code>resources/views</code>, kemudian buat file <strong>app.blade.php</strong> di dalamnya. Lalu isi dengan
+                                source code seperti berikut</p>
+                            <img src="../images/gambar56.png" class="laprak-img" alt="app blade">
+                            <p>Pada file <strong>products.blade.php</strong>, gunakan layout seperti berikut.</p>
+                            <img src="../images/gambar57.png" class="laprak-img" alt="product blade">                       
+
+                            <!-- Running -->
+                            <<h5><i class="bi bi-play-circle me-2" style="color:var(--rose-accent)"></i>9. Running</h5>
+                            <p>Setelah mengatur semua komponen, jalankan perintah <code>php artisan serve</code> lalu buka URL 
+                                <code>http://127.0.0.1:8000/products</code>. Maka akan muncul tampilan seperti berikut ini.
+                            </p>
+                            <img src="../images/gambar58.png" class="laprak-img" alt="output">
+
+                            <!-- Rangkuman Artisan -->
+                            <h5><i class="bi bi-journal-text me-2" style="color:var(--rose-accent)"></i>10. Rangkuman Artisan</h5>
+                            <table class="laprak-table">
+                                <thead>
+                                    <tr><th>Kategori</th><th>Perintah</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>php artisan serve</td>
+                                        <td>Menjalankan server lokal</td>
+                                    </tr>
+                                    <tr>
+                                        <td>php artisan migrate</td>
+                                        <td>Menjalankan migration</td>
+                                    </tr>
+                                    <tr>
+                                        <td>php artisan db:seed</td>
+                                        <td>Menjalankan seeder</td>
+                                    </tr>
+                                    <tr>
+                                        <td>php artisan make:model</td>
+                                        <td>Membuat model baru</td>
+                                    </tr>
+                                    <tr>
+                                        <td>php artisan make:controller</td>
+                                        <td>Membuat controller baru</td>
+                                    </tr>
+                                    <tr>
+                                        <td>php artisan route:list</td>
+                                        <td>Menampilkan daftar route</td>
+                                    </tr>
+                                    <tr>
+                                        <td>php artisan cache:clear</td>
+                                        <td>Membersihkan cache</td>
+                                    </tr>
+                                    <tr>
+                                        <td>php artisan make:model -mcs</td>
+                                        <td>Shortcut: Model + Migration + Controller + Seeder</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="callout">
+                                Gunakan <code>php artisan make:model Product -mcs</code> untuk membuat Model, Migration, Controller, 
+                                dan Seeder sekaligus. Parameter yang digunakan: <code>-m</code> migration <code>-c</code> controller
+                                <code>-s</code> seeder.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E. Tugas -->
+                    <div class="laprak-card fade-up" id="tugas">
+                        <div class="card-header-custom">
+                            <div class="section-letter">E</div>
+                            <h3>Tugas</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Implementasi Migration, Seeding, Model, Route, Controller, dan View untuk CRUD data mahasiswa.</p>
+
+                            <div class="step-item">
+                                <div class="step-num">1</div>
+                                <div class="step-content">
+                                    <h5>Buat Tabel Mahasiswa</h5>
+                                    <p>Setelah membuat database baru, buat tabel mahasiswa menggunakan perintah <code>php artisan make:migration create_products_table</code>.
+                                        File baru akan berada pada folder <code>database/migrations</code>.
+                                    </p>
+                                    <p>Buka file tersebut kemudian ubah seperti berikut.</p>
+                                    <img src="../images/gambar59.png" class="laprak-img" alt="create table">
+                                    <p>Lalu ketik perintah <code>php artisan migrate</code> untuk menjalankan migration. Tabel akan otomatis terbentuk.</p>
+                                    <img src="../images/gambar60.png" class="laprak-img" alt="migration">
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">2</div>
+                                <div class="step-content">
+                                    <h5>Buat Seeder untuk Data Mahasiswa</h5>
+                                    <p>Jalankan perintah <code>php artisan make:seeder MahasiswaSeeder</code> di terminal untuk membuat file seeder.
+                                        Lalu buka file <strong>MahasiswaSeeder.php</strong>, tambahkan perintah berikut.
+                                    </p>
+                                    <img src="../images/gambar61.png" class="laprak-img" alt="seeder">
+                                    <p>Kemudian, pada file <strong>DatabaseSeeder.php</strong> daftarkan seeder yang telah dibuat sebelumnya seperti berikut.
+                                    </p>
+                                    <img src="../images/gambar62.png" class="laprak-img" alt="database seeder">
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">3</div>
+                                <div class="step-content">
+                                    <h5>Buat Model</h5>
+                                    <p>Jalankan <code>php artisan make:model Mahasiswa -m</code> untuk membuat model Mahasiswa. Buka file <strong>Mahasiswa.php</strong>
+                                        Tambahkan kode berikut.</p>
+                                    <img src="../images/gambar63.png" class="laprak-img" alt="$fillable">
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">4</div>
+                                <div class="step-content">
+                                    <h5>Buat Resource Controller</h5>
+                                    <p>Jalankan <code>php artisan make:controller MahasiswaController --resource</code> dan lengkapi masing-masing method CRUD.
+                                    </p>
+                                    <img src="../images/gambar64.png" class="laprak-img" alt="controller">
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">5</div>
+                                <div class="step-content">
+                                    <h5>Atur Routing</h5>
+                                    <p>Tambahkan <code>Route::resource('mahasiswa', MahasiswaController::class);</code> pada file <strong>web.php</strong>.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">6</div>
+                                <div class="step-content">
+                                    <h5>Buat View dengan Blade</h5>
+                                    <p>Buat folder dengan nama <strong>mahasiswa</strong> pada folder <code>resources/views</code>. Tambahkan file baru dengan nama 
+                                        <strong>create.blade.php</strong>, <strong>edit.blade.php</strong>, dan <strong>index.blade.php</strong>.
+                                    </p>
+                                    <p>Pada view <strong>index.blade.php</strong>, ketik html berikut.</p>
+                                    <img src="../images/gambar65.png" class="laprak-img" alt="index">
+                                    <p>Selanjutnya, untuk <strong>create.blade.php</strong> diisi sebagai berikut.</p>
+                                    <img src="../images/gambar66.png" class="laprak-img" alt="create">
+                                    <p>Untuk <strong>edit.blade.php</strong> seperti berikut.</p>
+                                    <img src="../images/gambar67.png" class="laprak-img" alt="edit">
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">7</div>
+                                <div class="step-content">
+                                    <h5>Jalankan Project</h5>
+                                    <p>Setelah menjalankan <code>php artisan serve</code>, buka URL <code>http://127.0.0.1:8000/mahasiswa</code>.
+                                        Maka akan muncul tampilan seperti berikut.</p>
+                                    <img src="../images/gambar68.png" class="laprak-img" alt="index">
+                                    <p>Jika tombol <strong>Tambah Mahasiswa</strong> diklik, maka akan muncul halaman berikut.</p>
+                                    <img src="../images/gambar69.png" class="laprak-img" alt="create">
+                                    <p>Kemudian, pada tombol aksi <strong>Edit</strong>, akan muncul tampilan berikut.</p>
+                                    <img src="../images/gambar70.png" class="laprak-img" alt="edit">
+                                    <p>Project tersebut dapat berjalan dengan baik dan berhasil mengimplementasikan CRUD dengan komponen Migration, 
+                                        Seeding, Model, Routing, Controller, dan View.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kesimpulan -->
+                    <div class="laprak-card fade-up" id="tugas">
+                        <div class="card-header-custom">
+                            <div class="section-letter">F</div>
+                            <h3>Kesimpulan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Dari praktikum yang telah dilakukan, telah dipelajari dan dipraktikkan kegunaan komponen-komponen inti dalam
+                                pengembangan aplikasi website menggunakan framework Laravel.
+                            </p>
+                            <ul>
+                                <li><strong>Migration</strong> digunakan untuk membuat dan mengelola struktur database.</li>
+                                <li><strong>Seeding</strong> digunakan untuk mengisi data awal atau data dummy ke database.</li>
+                                <li><strong>Model</strong> digunakan sebagai penghubung antara aplikasi dan database.</li>
+                                <li><strong>Routing</strong> mengatur jalur URL dan menetukan controller yang dipanggil.</li>
+                                <li><strong>Controller</strong> mengatur logika aplikasi dan mengambil/mengolah data dari model untuk dikirim ke view.</li>
+                                <li><strong>View</strong> menampilkan data ke user dalam bentuk tampilan antarmuka yang berbentuk HTML/Blade.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Repository Github -->
+                    <div class="laprak-card fade-up" id="github">
+                        <div class="card-header-custom">
+                            <div class="section-letter">G</div>
+                            <h3>Repository Github</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Kode project dapat diakses melalui repository Github berikut.</p>
+                            <a href="https://github.com/amelianiisrina/PemrogramanWeb" class="btn-pink" target="_blank">
+                                <i class="bi bi-github"></i> Buka Github
+                            </a>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+            </div>
+        </section>  
+        
+        <section id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <h5>Niisrina Amelia</h5>
+                            <p>A computer science student who loves trying out new things and exploring creative ideas. Based in Padang, Indonesia.</p>
+                            <p style="font-size:0.82rem;">&copy; 2025 Niisrina Amelia. All rights reserved.</p>
+                        </div>
+
+                        <div class="col-6">
+                            <h5 class="text-center mb-4">Contact</h5>
+                            <div class="row justify-content-center g-3">
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://www.instagram.com/mellll.ia?igsh=ODRmOW8xZ2VuMGZ5" target="_blank" style="text-decoration: none;">
+                                        <i class="bi bi-instagram" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://id.linkedin.com/in/niisrina-amelia-41481531b" target="_blank" style="text-decoration: none;">
+                                        <i class="bi bi-linkedin" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="mailto:amelianiisrina@gmail.com" style="text-decoration: none;">
+                                        <i class="bi bi-envelope-at" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://discordapp.com/users/1295724095627067434" style="text-decoration: none;">
+                                        <i class="bi bi-discord" style="font-size: 40px"></i>
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+
+</body>
+</html>
+                            

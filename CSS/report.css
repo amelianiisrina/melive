@@ -1,0 +1,321 @@
+/* Settingan Header Halaman Laporan Praktikum */
+    .laprak-header {
+        background: linear-gradient(135deg, var(--blush) 0%, #ffd6e4 50%, var(--blush) 100%);
+        padding: 72px 0 56px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .laprak-header::before {
+        content: '';
+        position: absolute;
+        top: -60px; right: -60px;
+        width: 320px; height: 320px;
+        background: radial-gradient(circle, rgba(247,160,184,0.35) 0%, transparent 70%);
+        border-radius: 50%;
+    }
+
+    .laprak-header::after {
+        content: '';
+        position: absolute;
+        bottom: -40px; left: -40px;
+        width: 220px; height: 220px;
+        background: radial-gradient(circle, rgba(213,232,255,0.4) 0%, transparent 70%);
+        border-radius: 50%;
+    }
+        
+    .hero-badge {
+        display: inline-block;
+        background: var(--rose);
+        color: var(--white);
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 4px 14px;
+        border-radius: 20px;
+        margin-bottom: 16px;
+    }
+
+    .laprak-header h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 10px;
+            }
+    .laprak-header p {
+        color: var(--text-light);
+        font-size: 1rem;
+        margin: 0;
+    }
+
+/* Settingan Table of Content */
+        .toc-sticky {
+            position: sticky;
+            top: 80px;
+        }
+        .toc-card {
+            background: var(--blush);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 20px;
+        }
+        .toc-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--rose);
+        }
+        .toc-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-mid);
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+            margin-bottom: 2px;
+        }
+        .toc-link:hover {
+            background: var(--rose);
+            color: var(--white);
+        }
+        .toc-link i { font-size: 0.8rem; opacity: 0.7; }
+
+/* Settingan Section Wrapper */
+        .content-section {
+            background: linear-gradient(180deg, var(--blush) 0%, var(--white) 180px);
+            padding: 48px 0 64px;
+        }
+
+/* Settingan Card Isi Laporan Praktikum */
+        .laprak-card {
+            background: var(--white);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            margin-bottom: 28px;
+            overflow: hidden;
+            box-shadow: 0 2px 16px rgba(251,111,146,0.06);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .laprak-card:hover {
+            box-shadow: 0 8px 32px rgba(251,111,146,0.13);
+            transform: translateY(-2px);
+        }
+        .card-header-custom {
+            background: linear-gradient(90deg, var(--blush), #fff0f6);
+            padding: 18px 28px;
+            border-bottom: 1px solid var(--card-border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .card-header-custom .section-letter {
+            width: 36px; height: 36px;
+            background: var(--rose-accent);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        .card-header-custom h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 0;
+        }
+        .card-body-custom {
+            padding: 28px;
+        }
+        .card-body-custom p, .card-body-custom li {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-mid);
+        }
+        .card-body-custom ul, .card-body-custom ol {
+            padding-left: 20px;
+        }
+        .card-body-custom li { margin-bottom: 6px; }
+
+/* Settingan Inline Code */
+        code {
+            background: var(--code-bg);
+            padding: 2px 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82em;
+            color: var(--rose-accent);
+            display: inline-block;
+        }
+    
+/* Settingan Wadah Image */
+        .laprak-img {
+            border: 1px solid var(--rose);
+            border-left: 4px solid var(--rose-accent);
+            border-radius: 16px;
+            display: block;
+            max-width: 100%;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            margin-bottom: 16px;
+        }
+        
+/* Settingan Langkah-langkah Praktikum */
+        .step-item {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--card-border);
+        }
+        .step-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .step-num {
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, var(--rose), var(--rose-dark));
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .step-content h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .step-content p {
+            margin: 0 0 10px;
+            font-size: 0.93rem;
+            color: var(--text-mid);
+            line-height: 1.75;
+        }
+
+/* Settingan Tabel dalam Laporan Praktikum */
+        .laprak-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.9rem;
+        }
+        .laprak-table thead tr {
+            background: linear-gradient(90deg, var(--rose), var(--rose-dark));
+            color: white;
+        }
+        .laprak-table th {
+            padding: 12px 18px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-align: left;
+        }
+        .laprak-table td {
+            padding: 11px 18px;
+            color: var(--text-mid);
+            border-bottom: 1px solid var(--card-border);
+        }
+        .laprak-table tbody tr:hover { background: var(--blush); }
+        .laprak-table td:first-child {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+            color: var(--rose-accent);
+            font-weight: 500;
+        }
+
+/* Settingan Daftar Tools */
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 6px;
+        }
+        .pill {
+            background: var(--blush);
+            border: 1px solid var(--rose);
+            color: var(--text-mid);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .pill i { color: var(--rose-dark); font-size: 0.8rem; }
+
+/* Settingan Callout */
+        .callout {
+            background: linear-gradient(90deg, #fff0f4, var(--blush));
+            border-left: 4px solid var(--rose-accent);
+            border-radius: 10px;
+            padding: 14px 20px;
+            margin: 16px 0;
+            font-size: 0.9rem;
+            color: var(--text-mid);
+        }
+        .callout strong { color: var(--rose-dark); }
+
+
+/* Settingan Button */
+        .btn-pink {
+            background: linear-gradient(135deg, var(--rose), var(--rose-dark));
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .btn-pink:hover {
+            box-shadow: 0 4px 20px rgba(234,126,163,0.45);
+            transform: translateY(-1px);
+            color: white;
+        }
+
+/* Settingan Section Tugas */
+        .tugas-item {
+            background: var(--blush);
+            border-radius: 14px;
+            padding: 18px 22px;
+            border: 1px solid var(--card-border);
+        }
+        .tugas-item h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .tugas-item p {
+            font-size: 0.9rem;
+            color: var(--text-mid);
+            margin: 0;
+            line-height: 1.7;
+        }
+        .tugas-num {
+            display: inline-block;
+            background: var(--rose-accent);
+            color: white;
+            width: 22px; height: 22px;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-align: center;
+            line-height: 22px;
+            margin-right: 8px;
+        }
