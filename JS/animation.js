@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 obs.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0,
+         rootMargin: '0px 0px -50px 0px'   });
 
     elements.forEach((el, i) => {
         console.log(i, el.id || el.className);
