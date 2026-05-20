@@ -97,8 +97,3 @@ body {
             transform: translateY(0);
         }
 
-/* Responsive */
-        @media (max-width: 768px) {
-            .card-body-custom { padding: 20px; }
-            .card-header-custom { padding: 14px 20px; }
-        }
