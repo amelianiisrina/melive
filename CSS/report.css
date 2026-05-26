@@ -49,6 +49,9 @@
         font-size: 1rem;
         margin: 0;
     }
+    .laprak-list li::marker {
+        font-weight: bold;
+    }
 
 /* Settingan Table of Content */
         .toc-sticky {

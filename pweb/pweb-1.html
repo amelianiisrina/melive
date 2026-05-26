@@ -3,9 +3,12 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Web Profile</title>
+        <title>Laporan Praktikum 1</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="/CSS/custom.css">
+        <link rel="stylesheet" href="/CSS/report.css">
+        <link rel="stylesheet" href="https://melive.ifportofolio.com/CSS/report.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <style>
             .card {
@@ -52,18 +55,17 @@
         </style>
     </head>
 
-    <body style="min-height: 100vh; display: flex; flex-direction: column;">
-            <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #ffe9ef;">
+    <body>
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light sticky-top">
                 <div class="container">
-                    <div class="navbar-brand d-flex align-items-center">
+                    <div class="navbar-brand d-flex align-items-center gap-2">
                         <img src="../images/logo.png" alt="logo" width="40" class="me-2">
                         <span>Laporan Praktikum 1</span>
                     </div>
-
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
                     <div class="collapse navbar-collapse" id="navMenu">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
@@ -81,12 +83,16 @@
                 </div>
             </nav>
 
-            <header class="text-center py-5" style="background-color: #ffe9ef; font-family: 'Times New Roman', serif;">
-                <h1>Laporan Praktikum 1</h1>
-                <p>Pemrograman Web - Konfigurasi Laravel</p>
+            <!-- Header -->
+            <header class="laprak-header text-center">
+                <div class="position-relative" style="z-index:1">
+                    <div class="hero-badge">Pemrograman Web</div>
+                    <h1>Laporan Praktikum 1</h1>
+                    <p>Konfigurasi Laravel</p>
+                </div>
             </header>
 
-            <section style="background: linear-gradient(180deg, #ffe9ef, #ffffff);">
+            <section class="content-section">
                 <div class="container">
                     <div class="row justify-content-center">
 
@@ -235,37 +241,37 @@
                 </div>
             </section>
 
-            <section id="footer" class="mt-5 pt-4" style="background: linear-gradient(180deg, #ffffff, #d5e8ff);">
+            <section id="footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-md-6 mb-4 mb-md-0">
                             <h5>Niisrina Amelia</h5>
                             <p>A computer science student who loves trying out new things and exploring creative ideas. Based in Padang, Indonesia.</p>
-                            <p>&copy; 2025 Niisrina Amelia. All rights reserved.</p>
+                            <p style="font-size:0.82rem;">&copy; 2025 Niisrina Amelia. All rights reserved.</p>
                         </div>
 
                         <div class="col-6">
                             <h5 class="text-center mb-4">Contact</h5>
-                            <div class="row">
-                                <div class="col-3 d-flex justify-content-center align-items-center">
-                                    <a href="https://www.instagram.com/mellll.ia?igsh=ODRmOW8xZ2VuMGZ5" target="_blank" style="text-decoration: none;">
+                            <div class="row justify-content-center g-3">
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://www.instagram.com/rnliea?igsh=ODRmOW8xZ2VuMGZ5" target="_blank" style="text-decoration: none;">
                                         <i class="bi bi-instagram" style="font-size: 40px"></i>
                                     </a>
                                 </div>
 
-                                <div class="col-3 d-flex justify-content-center align-items-center">
+                                <div class="col-3 d-flex justify-content-center contact-icon">
                                     <a href="https://id.linkedin.com/in/niisrina-amelia-41481531b" target="_blank" style="text-decoration: none;">
                                         <i class="bi bi-linkedin" style="font-size: 40px"></i>
                                     </a>
                                 </div>
 
-                                <div class="col-3 d-flex justify-content-center align-items-center">
+                                <div class="col-3 d-flex justify-content-center contact-icon">
                                     <a href="mailto:amelianiisrina@gmail.com" style="text-decoration: none;">
                                         <i class="bi bi-envelope-at" style="font-size: 40px"></i>
                                     </a>
                                 </div>
 
-                                <div class="col-3 d-flex justify-content-center align-items-center">
+                                <div class="col-3 d-flex justify-content-center contact-icon">
                                     <a href="https://discordapp.com/users/1295724095627067434" style="text-decoration: none;">
                                         <i class="bi bi-discord" style="font-size: 40px"></i>
                                     </a>
@@ -275,3 +281,5 @@
                     </div>  
                 </div>
             </section>
+    </body>
+</html>

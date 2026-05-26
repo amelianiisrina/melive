@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Laporan Praktikum 3</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/CSS/custom.css">
+        <link rel="stylesheet" href="/CSS/report.css">
+        <link rel="stylesheet" href="https://melive.ifportofolio.com/CSS/report.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <div class="navbar-brand d-flex align-items-center gap-2">
+                <img src="../images/logo.png" alt="logo" width="40" class="me-2">
+                <span>Laporan Praktikum 3</span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../portofolio.html">Projects</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../report.html">Report</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+        <header class="laprak-header text-center">
+            <div class="position-relative" style="z-index:1">
+                <div class="hero-badge">Pemrograman Web</div>
+                <h1>Laporan Praktikum 3</h1>
+                <p>Student, Major, dan Subject</p>
+            </div>
+        </header>
+
+    <!-- Konten Utama -->
+        <section class="content-section">
+            <div class="container">
+                <div class="row g-4">
+
+                <!-- Daftar Isi -->
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="toc-sticky">
+                            <div class="toc-card">
+                                <div class="toc-title"><i class="bi bi-journal-bookmark-fill me-2" style="color:var(--rose-accent)"></i>Daftar Isi</div>
+                                <a class="toc-link" href="#pendahuluan">
+                                    <i class="bi bi-chevron-right"></i>A. Pendahuluan</a>
+                                <a class="toc-link" href="#tujuan">
+                                    <i class="bi bi-chevron-right"></i>B. Tujuan Praktikum</a>
+                                <a class="toc-link" href="#tools">
+                                    <i class="bi bi-chevron-right"></i>C. Alat & Tools</a>
+                                <a class="toc-link" href="#langkah">
+                                    <i class="bi bi-chevron-right"></i>D. Langkah Kerja</a>
+                                <a class="toc-link" href="#tugas">
+                                    <i class="bi bi-chevron-right"></i>E. Tugas</a>
+                                <a class="toc-link" href="#kesimpulan">
+                                    <i class="bi bi-chevron-right"></i>F. Kesimpulan</a>
+                                <a class="toc-link" href="#github">
+                                    <i class="bi bi-chevron-right"></i>G. Repository Github</a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Materi -->
+                <div class="col-lg-9">
+
+                    <!-- A. Pendahuluan -->
+                    <div class="laprak-card" id="pendahuluan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">A</div>
+                            <h3>Pendahuluan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Praktikum ini membahas konsep <strong>Relationship</strong> dalam framework Laravel, khususnya one-to-many dan 
+                                many-to-many, studi kasus yang digunakan adalah sistem akademik sederhana yang terdiri dari student, major,
+                                dan subject.
+                            </p>
+                            <p>Melalui praktikum ini, mahasiswa diharapkan dapat memahami konsep relasi antar tabel, penggunaan foreign key,
+                                pivot table, serta penerapan eloquent relationship dalam pengelolaan data berbasis web.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- B. Tujuan -->
+                    <div class="laprak-card" id="tujuan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">B</div>
+                            <h3>Tujuan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="row g-3 mb-2">
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-diagram-3 me-2" style="color:var(--rose-accent)"></i>Konsep Relationship</h6>
+                                    <p>Mampu memahami konsep relationship dalam Laravel dan membedakan jenis-jenisnya, terutama <strong>
+                                        One-to-Many</strong> dan <strong>Many-to-Many</strong>.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-key me-2" style="color:var(--rose-accent)"></i>Migration & Foreign Key</h6>
+                                    <p>Mampu membuat migration dengan <strong>foreign key</strong> dan <strong>pivot table</strong> untuk 
+                                        mendukung relasi antar tabel.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-2">
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-gear-wide-connected me-2" style="color:var(--rose-accent)"></i>Eloquent Relationship</h6>
+                                    <p>Mampu mengimplementasikan method relatinship pada model seperti <code>hasMany()</code>, <code>belongsTo()</code>,
+                                        dan <code>belongsToMany()</code>.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                        <h6><i class="bi bi-table me-2" style="color:var(--rose-accent)"></i>View dengan Relasi</h6>
+                                        <p>Mampu menampilkan data dari beberapa tabel yang berelasi menggunakan <strong>Blade Template</strong> dengan
+                                            bantuan Eloquent Relationship di Laravel.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- C. Tools -->
+                    <div class="laprak-card" id="tools">
+                        <div class="card-header-custom">
+                            <div class="section-letter">C</div>
+                            <h3>Alat dan Tools yang Digunakan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="pill-list">
+                                <div class="pill"><i class="bi bi-laptop"></i>Laptop</div>
+                                <div class="pill"><i class="bi bi-server"></i>XAMPP</div>
+                                <div class="pill"><i class="bi bi-code-slash"></i>VS Code</div>
+                                <div class="pill"><i class="bi bi-puzzle"></i>Composer</div>
+                                <div class="pill"><i class="bi bi-git"></i>GIT</div>
+                                <div class="pill"><i class="bi bi-cpu"></i>Node JS</div>
+                                <div class="pill"><i class="bi bi-box"></i>NPM</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- D. Langkah Kerja -->
+                    <div class="laprak-card" id="langkah">
+                        <div class="card-header-custom">
+                            <div class="section-letter">D</div>
+                            <h3>Langkah Kerja</h3>
+                        </div>
+                        <div class="card-body-custom step-content">
+
+                            <!-- Konfigurasi DB -->
+                            <h5><i class="bi bi-database-gear me-2" style="color:var(--rose-accent)"></i>1. Struktur Database</h5>
+                            <p>Sistem akademik ini memiliki empat tabel: <strong>majors</strong>, <strong>students</strong>,
+                                <strong>subjects</strong>, dan tabel pivot <strong>student_subject</strong>. Berikut adalah 
+                                relasi antar entitas.</p>
+                            <div class="callout">
+                                <strong>Relasi yang digunakan:</strong><br>
+                                <ul>
+                                    <li>
+                                        <code>Major</code> → <code>Student</code> : <strong>One-to-Many</strong> (satu jurusan
+                                        memiliki banyak mahasiswa).
+                                    </li>
+                                    <li>
+                                        <code>Student</code> → <code>Major</code> : <strong>Many-to-One</strong> (banyak mahasiswa
+                                        memilih satu jurusan).
+                                    </li>
+                                    <li>
+                                        <code>Student</code> ↔ <code>Subject</code> : <strong>Many-to-Many</strong> (satu mahasiswa
+                                        mengambil banyak mata kuliah, dan satu mata kuliah diambil banyak mahasiswa, dan dihubungkan 
+                                        melalui tabel pivot).
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>Lakukan konfigurasi database pada file <strong>.env</strong> sebagai berikut.</p>
+                            <img src="../images/gambar71.png" class="laprak-img" alt="database">
+
+                            <!-- Migration -->
+                            <h5><i class="bi bi-file-earmark-code me-2" style="color:var(--rose-accent)"></i>2. Migration</h5>
+                            <ol type="A" class="laprak-list">
+                                <li><strong>Migration Tabel majors</strong>
+                                    <p>Jalankan perintah <code>php artisan make:migration create_majors_table</code> lalu isi kolom
+                                        tabel dengan <strong>id</strong> dan <strong>name</strong> seperti berikut.
+                                    </p>
+                                    <img src="../images/gambar72.png" class="laprak-img" alt="major migration">
+                                </li>
+                                <li><strong>Migration Tabel students</strong>
+                                    <p>Jalankan perintah <code>php artisan make:migration create_students_table</code> lalu isi kolom
+                                        tabel dengan <strong>id</strong>, <strong>nim</strong>, <strong>name</strong>, 
+                                        <strong>address</strong>, dan <strong>foreignId</strong> seperti berikut.
+                                    </p>
+                                    <img src="../images/gambar73.png" class="laprak-img" alt="students migration">                        
+                                </li>
+                                <li><strong>Migration Tabel subjects</strong>
+                                    <p>Jalankan perintah <code>php artisan make:migration create_subjects_table</code> lalu isi kolom
+                                        tabel dengan <code>id</code>, <code>name</code>, dan <code>sks</code> seperti berikut.
+                                    </p>
+                                    <img src="../images/gambar74.png" class="laprak-img" alt="subjects migration">
+                                </li>
+                                <li><strong>Migration Tabel Pivot student_subject</strong>
+                                    <p>Jalankan perintah <code>php artisan make:migration create_student_subject_code</code> lalu isi kolom
+                                        tabel dengan foreign key dari tabel subjects dan students seperti berikut.
+                                    </p>
+                                    <img src="../images/gambar75.png" class="laprak-img" alt="pivot table migration">
+                                </li>
+                            </ol>
+                            <div class="callout">
+                                Jalankan perintah <code>php artisan migrate</code> untuk mengeksekusi file migration yang 
+                                    telah dibuat sebelumnya.
+                            </div>
+                            
+                            <!-- Model -->
+                            <h5><i class="bi bi-box me-2" style="color:var(--rose-accent)"></i>3. Model</h5>
+                            <ol type="A" class="laprak-list">
+                                <li><strong>Model Major</strong>
+                                    <p>Jalankan perintah <code>php artisan make:model Major</code> . Tambahkan method <code>students()</code>
+                                        yang menggunakan <code>hasMany(Student::class)</code> untuk menyatakan bahwa satu jurusan memiliki 
+                                        banyak mahasiswa.
+                                    </p>
+                                    <img src="../images/gambar76.png" class="laprak-img" alt="model major">
+                                </li>
+                                <li><strong>Model Student</strong>
+                                    <p>Jalankan perintah <code>php artisan make:model Student</code> . Model ini memiliki dua relationship: 
+                                        <code>belongsTo(Major::class)</code> untuk relasi ke jurusan, dan <code>belongsToMany(Subject::class)</code> 
+                                        untuk relasi <strong>Many-to-Many</strong> dengan mata kuliah.
+                                    </p>
+                                    <img src="../images/gambar77.png" class="laprak-img" alt="model student">                        
+                                </li>
+                                <li><strong>Model Subject</strong>
+                                    <p>Jalankan perintah <code>php artisan make:model Subject</code> . Tambahkan method <code>students()</code>
+                                        dengan <code>belongsToMany()</code> sebagai relasi <strong>Many-to-Many</strong> dengan mahasiswa.
+                                    </p>
+                                    <img src="../images/gambar78.png" class="laprak-img" alt="model subject">
+                                </li>
+                            </ol>
+
+                            <!-- Seeding -->
+                            <h5><i class="bi bi-table me-2" style="color:var(--rose-accent)"></i>4. Seeding</h5>
+                            <ol type="A" class="laprak-list">
+                                <li><strong>Seeder untuk Major</strong>
+                                    <p>Jalankan perintah <code>php artisan make:seeder MajorSeeder</code> . Tambahkan 4 data jurusan:
+                                        Teknik Informatika, Sistem Informasi, Teknik Komputer, dan Manajemen Informatika.
+                                    </p>
+                                    <img src="../images/gambar79.png" class="laprak-img" alt="seeder major">
+                                </li>
+                                <li><strong>Seeder untuk Subject</strong>
+                                    <p>Jalankan perintah <code>php artisan make:seeder SubjectSeeder</code>. Tambahkan 5 mata kuliah
+                                        lengkap dengan sks-nya.
+                                    </p>
+                                    <img src="../images/gambar80.png" class="laprak-img" alt="seeder subject">                        
+                                </li>
+                                <li><strong>Seeder untuk Student</strong>
+                                    <p>Jalankan perintah <code>php artisan make:seeder StudentSeeder</code>. Tambahkan 5 data dummy 
+                                        identitas mahasiswa.
+                                    </p>
+                                    <img src="../images/gambar81.png" class="laprak-img" alt="seeder student">                        
+                                </li>
+                                <li><strong>Update DatabaseSeeder</strong>
+                                    <p>Buka file <strong>DatabaseSeeder.php</strong>. Update file untuk memanggil beberapa seeder
+                                        sekaligus sehingga data awal pada tabel major, student, dan subject dapat dimasukkan ke dalam
+                                        database.
+                                    </p>
+                                    <img src="../images/gambar82.png" class="laprak-img" alt="update database seeder">                        
+                                </li>
+                            </ol>
+                            <div class="callout">
+                                Jalankan perintah <code>php artisan db:seed</code> untuk menjalankan seeder dan mengisi data awal ke
+                                    dalam database secara otomatis.
+                            </div>
+
+                            <!-- Controller -->
+                            <h5><i class="bi bi-ui-radios-grid me-2" style="color:var(--rose-accent)"></i>5. Controller</h5>
+                            <p>Jalankan perintah <code>php artisan make:controller StudentController</code> untuk membuat 
+                                <strong>StudentController</strong>. Tambahkan fungsi di dalamnya seperti berikut.
+                            </p>
+                            <img src="../images/gambar83.png" class="laprak-img" alt="student controller">
+            
+                            <!-- Routing -->
+                            <h5><i class="bi bi-signpost me-2" style="color:var(--rose-accent)"></i>6. Routing</h5>
+                            <p>Buat routing dalam file <strong>web.php</strong> seperti berikut.</p>
+                            <img src="../images/gambar84.png" class="laprak-img" alt="routing">
+                            
+                            <!-- View -->
+                            <h5><i class="bi bi-layout-text-window-reverse me-2" style="color:var(--rose-accent)"></i>7. Views</h5>
+                            <p>Buat folder <code>resources/views/students</code> dan file <code>resources/views/layouts/app.blade.php</code>.</p>
+                            <ol type="A" class="laprak-list">
+                                <li><strong>Layout Utama (app.blade.php)</strong>
+                                    <p>Berisi struktur dasar HTML yang digunakan sebagai layout utama dan kerangka dasar halaman web 
+                                        untuk bagian navbar, struktur HTML, dan elemen umum agar tidak perlu ditulis berulang kali.
+                                    </p>
+                                    <img src="../images/gambar85.png" class="laprak-img" alt="app.blade.php">
+                                </li>
+                                <li><strong>Index (index.blade.php)</strong>
+                                    <p>Halaman yang menampilkan daftar seluruh mahasiswa dalam bentuk tabel lengkap dengan mata kuliah yang diambil.
+                                        Tombol aksi ditambahkan untuk melakukan perubahan pada data mahasiswa.
+                                    </p>
+                                    <img src="../images/gambar86.png" class="laprak-img" alt="index.blade.php">
+                                </li>
+                                <li><strong>Create (create.blade.php)</strong>
+                                    <p>Halaman yang digunakan sebagai tempat menambah data mahasiswa baru beserta identitas mata kuliah dan jurusannya.
+                                    </p>
+                                    <img src="../images/gambar87.png" class="laprak-img" alt="index.blade.php">
+                                </li>
+                            </ol>
+
+                            <!-- Output -->
+                            <h5><i class="bi bi-display me-2" style="color:var(--rose-accent)"></i>8. Running</h5>
+                            <p>Jalankan <code>php artisan serve</code> untuk melihat tampilan akhir dari project. Buka 
+                                URL <code>http://127.0.0.1:8000/students</code>, tampilan akan terlihat seperti berikut.</p>
+                            <img src="../images/gambar88.png" class="laprak-img" alt="output url/students">
+                            <p>Klik tombol <strong>Detail</strong> untuk menampilkan data lengkap mahasiswa seperti berikut.</p>
+                            <img src="../images/gambar89.png" class="laprak-img" alt="tombol detail">
+                            <p>Tombol <strong>Edit</strong> akan menampilkan form untuk memperbarui data mahasiswa yang sudah ada.</p>
+                            <img src="../images/gambar90.png" class="laprak-img" alt="tombol edit">
+                            <p>Data dapat dihapus dengan mengklik tombol <strong>Delete</strong>. Akan muncul pesan bahwa data 
+                                berhasil dihapus seperti berikut.</p>
+                            <img src="../images/gambar91.png" class="laprak-img" alt="tombol delete">
+                                
+                    <!-- E. Tugas -->
+                    <div class="laprak-card" id="tugas">
+                        <div class="card-header-custom">
+                            <div class="section-letter">E</div>
+                            <h3>Tugas</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Implementasi Query Database untuk Menampilkan Laporan Statistik Akademik</p>
+
+                            <div class="step-item">
+                                <div class="step-num">1</div>
+                                <div class="step-content">
+                                    <h5>Buat Report Controller </h5>
+                                    <p>Buat controller baru menggunakan perintah <code>php artisan make:controller ReportController</code>.
+                                        File baru akan berada pada folder <code>App\Http\Controllers\ReportController.php</code>.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">2</div>
+                                <div class="step-content">
+                                    <h5>Buat Routing untuk ReportController</h5>
+                                    <p>Buka file <strong>web.php</strong> kemudian tambahkan baris perintah berikut untuk mengatur routing.</p>
+                                    <img src="../images/gambar92.png" class="laprak-img" alt="routing">
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">3</div>
+                                <div class="step-content">
+                                    <h5>Isi Controller</h5>
+                                    <p>Buka file <strong>ReportController.php</strong> lalu isi dengan query berikut.</p>
+                                    <ol type="a">
+                                        <li>
+                                            <p>Semua mahasiswa beserta jurusan dan mata kuliahnya</p>
+                                            <div class="callout">
+                                                <code>$students = Student::with('major', 'subjects')->get();</code>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>Jurusan yang memiliki mahasiswa terbanyak</p>
+                                            <div class="callout">
+                                                <code>$majors = Major::withCount('students')->get();</code>
+                                                <code>$maxStudents = $majors->max('students_count');</code>
+                                                <code>$topMajors = $majors->where('students_count', $maxStudents);</code>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>Mata kuliah yang diambil oleh mahasiswa tertentu</p>
+                                            <div class="callout">
+                                                <code>$subjects = Subject::with('students')->get();</code>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>Total SKS yang diambil setiap mahasiswa</p>
+                                            <div class="callout">
+                                                <code>$totalSKS = Student::with('subjects')->get();</code>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <p>Isi file controller akan menjadi seperti berikut setelah diisi query.</p>
+                                    <img src="../images/gambar93.png" class="laprak-img" alt="file controller">
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">4</div>
+                                <div class="step-content">
+                                    <h5>Buat Index</h5>
+                                    <p>Pada <code>resources/views</code>, tambahkan folder baru yaitu <strong>reports</strong>
+                                        lalu buat file baru di dalamnya dengan nama <strong>index.blade.php</strong>.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">5</div>
+                                <div class="step-content">
+                                    <h5>Isi Index</h5>
+                                    <ol type="a"">
+                                        <li>
+                                            <p>Tampilkan tabel data mahasiswa beserta jurusan dan mata kuliahnya seperti berikut.</p>
+                                            <img src="../images/gambar94.png" class="laprak-img" alt="data mahasiswa">
+                                        </li>
+                                        <li>
+                                            <p>Tampilkan statistik jurusan dengan mahasiswa terbanyak seperti berikut.</p>
+                                            <img src="../images/gambar95.png" class="laprak-img" alt="jurusan dengan mahasiswa terbanyak">
+                                        </li>
+                                        <li>
+                                            <p>Tampilkan data mata kuliah dan mahasiswa yang mengambil dalam tabel seperti berikut.</p>
+                                            <img src="../images/gambar96.png" class="laprak-img" alt="mata kuliah dan mahasiswa yang mengambil">
+                                        </li>
+                                        <li>
+                                            <p>Tampilkan data total SKS yang diambil oleh tiap mahasiswa dalam tabel berikut.</p>
+                                            <img src="../images/gambar97.png" class="laprak-img" alt="total SKS tiap mahasiswa">
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">6</div>
+                                <div class="step-content">
+                                    <h5>Running</h5>
+                                    <p>Jalankan perintah <code>php artisan serve</code> lalu buka URL 
+                                        <code>http://127.0.0.1:8000/reports</code>. Tiap data statistik
+                                        ditampilkan dalam card untuk masing-masing datanya.</p>
+                                    <ol type="a">
+                                        <li>
+                                            <p>Data semua mahasiswa beserta jurusan dan mata kuliahnya</p>
+                                            <img src="../images/gambar98.png" class="laprak-img" alt="UI data mahasiswa">
+                                        </li>
+                                        <li>
+                                            <p>Jurusan dengan mahasiswa terbanyak</p>
+                                            <img src="../images/gambar99.png" class="laprak-img" alt="UI jurusan dengan mahasiswa terbanyak">
+                                        </li>
+                                        <li>
+                                            <p>Mata kuliah dan mahasiswa yang mengambil</p>
+                                            <img src="../images/gambar100.png" class="laprak-img" alt="UI mata kuliah dan mahasiswa yang mengambil">
+                                        </li>
+                                        <li>
+                                            <p>Total SKS yang diambil oleh tiap mahasiswa</p>
+                                            <img src="../images/gambar101.png" class="laprak-img" alt="UI total SKS tiap mahasiswa">
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kesimpulan -->
+                    <div class="laprak-card" id="kesimpulan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">F</div>
+                            <h3>Kesimpulan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Dari praktikum yang telah dilakukan, telah dipelajari dan dipraktikkan konsep <strong>Relationship</strong>
+                                dalam Laravel sebagai konsep fundamental dalam pengembangan aplikasi web dengan database.
+                            </p>
+                            <table class="laprak-table">
+                                <thead>
+                                    <tr><th>Method</th><th>Jenis Relasi</th><th>Fungsi</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>hasMany</code></td>
+                                        <td><strong>One-to-Many</strong></td>
+                                        <td>Satu data memiliki banyak data lain (Major → Student)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>belongsTo</code></td>
+                                        <td><strong>Many-to-One</strong></td>
+                                        <td>Banyak data milik 1 data (Student → Major)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>belongsToMany</code></td>
+                                        <td><strong>Many-to-Many</strong></td>
+                                        <td>Relasi dua arah dengan tabel pivot (Student ↔ Subject)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>with()</code></td>
+                                        <td><strong>Eager Loading</strong></td>
+                                        <td>Mengambil data beserta relasinya dalam satu query untuk mengurangi jumlah
+                                            query ke database.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>sum('column')</code></td>
+                                        <td><strong>Aggregate</strong></td>
+                                        <td>Menjumlahkan nilai dari suatu kolom tertentu</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                    
+                    <!-- Repository Github -->
+                    <div class="laprak-card" id="github">
+                        <div class="card-header-custom">
+                            <div class="section-letter">G</div>
+                            <h3>Repository Github</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Kode project dapat diakses melalui repository Github berikut.</p>
+                            <a href="https://github.com/amelianiisrina/PemrogramanWeb/tree/main/Prak8/Project8" class="btn-pink" target="_blank">
+                                <i class="bi bi-github"></i> Buka Github
+                            </a>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+            </div>
+        </section>  
+        
+        <section id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <h5>Niisrina Amelia</h5>
+                            <p>A computer science student who loves trying out new things and exploring creative ideas. Based in Padang, Indonesia.</p>
+                            <p style="font-size:0.82rem;">&copy; 2025 Niisrina Amelia. All rights reserved.</p>
+                        </div>
+
+                        <div class="col-6">
+                            <h5 class="text-center mb-4">Contact</h5>
+                            <div class="row justify-content-center g-3">
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://www.instagram.com/rnliea?igsh=ODRmOW8xZ2VuMGZ5" target="_blank" style="text-decoration: none;">
+                                        <i class="bi bi-instagram" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://id.linkedin.com/in/niisrina-amelia-41481531b" target="_blank" style="text-decoration: none;">
+                                        <i class="bi bi-linkedin" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="mailto:amelianiisrina@gmail.com" style="text-decoration: none;">
+                                        <i class="bi bi-envelope-at" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://discordapp.com/users/1295724095627067434" style="text-decoration: none;">
+                                        <i class="bi bi-discord" style="font-size: 40px"></i>
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+</body>
+</html>
+                            
