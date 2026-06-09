@@ -86,6 +86,11 @@
             transition: background 0.2s, color 0.2s;
             margin-bottom: 2px;
         }
+
+        .toc-link.sub {
+            padding-left: 50px;
+        }
+
         .toc-link:hover {
             background: var(--rose);
             color: var(--white);

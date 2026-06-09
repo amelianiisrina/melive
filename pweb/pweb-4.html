@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Laporan Praktikum 4</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/CSS/custom.css">
+        <link rel="stylesheet" href="/CSS/report.css">
+        <link rel="stylesheet" href="https://melive.ifportofolio.com/CSS/report.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <div class="navbar-brand d-flex align-items-center gap-2">
+                <img src="../images/logo.png" alt="logo" width="40" class="me-2">
+                <span>Laporan Praktikum 4</span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../portofolio.html">Projects</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../report.html">Report</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+        <header class="laprak-header text-center">
+            <div class="position-relative" style="z-index:1">
+                <div class="hero-badge">Pemrograman Web</div>
+                <h1>Laporan Praktikum 4</h1>
+                <p>Laravel UI, Bootstrap, & Templating</p>
+            </div>
+        </header>
+
+    <!-- Konten Utama -->
+        <section class="content-section">
+            <div class="container">
+                <div class="row g-4">
+
+                <!-- Daftar Isi -->
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="toc-sticky">
+                            <div class="toc-card">
+                                <div class="toc-title"><i class="bi bi-journal-bookmark-fill me-2" style="color:var(--rose-accent)"></i>Daftar Isi</div>
+                                <a class="toc-link" href="#pendahuluan">
+                                    <i class="bi bi-chevron-right"></i>A. Pendahuluan</a>
+                                <a class="toc-link" href="#tujuan">
+                                    <i class="bi bi-chevron-right"></i>B. Tujuan Praktikum</a>
+                                <a class="toc-link" href="#tools">
+                                    <i class="bi bi-chevron-right"></i>C. Alat & Tools</a>
+                                <a class="toc-link" href="#langkah">
+                                    <i class="bi bi-chevron-right"></i>D. Langkah Kerja</a>
+                                        <a class="toc-link sub" href="#langkah1">1. Membuat Project Laravel</a>
+                                        <a class="toc-link sub" href="#langkah2">2. Konfigurasi Database</a>
+                                        <a class="toc-link sub" href="#langkah3">3. User Authentication</a>
+                                        <a class="toc-link sub" href="#langkah4">4. Custom Table Users</a>
+                                        <a class="toc-link sub" href="#langkah5">5. Seeding User Admin</a>
+                                        <a class="toc-link sub" href="#langkah6">6. Templating dan Layouting</a>
+                                        <a class="toc-link sub" href="#langkah7">7. Manajemen User (CRUD)</a>
+                                <a class="toc-link" href="#kesimpulan">
+                                    <i class="bi bi-chevron-right"></i>E. Kesimpulan</a>
+                                <a class="toc-link" href="#github">
+                                    <i class="bi bi-chevron-right"></i>F. Repository Github</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Materi -->
+                <div class="col-lg-9">
+
+                    <!-- A. Pendahuluan -->
+                    <div class="laprak-card" id="pendahuluan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">A</div>
+                            <h3>Pendahuluan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Praktikum ini membahas pengembangan aplikasi web berbasis Laravel dengan studi kasus Sistem Informasi 
+                                Sekolah. Topik utama dalam praktikum ini meliputi penggunaan <strong>Laravel UI</strong>, integrasi 
+                                <strong>Bootstrap</strong> sebagai framework CSS, serta penerapan <strong>Templating dan Layouting</strong>
+                                menggunakan Blade Template Engine.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- B. Tujuan -->
+                    <div class="laprak-card" id="tujuan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">B</div>
+                            <h3>Tujuan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="row g-3 mb-2">
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-shield-check me-2" style="color:var(--rose-accent)"></i>Laravel UI & Authentication</h6>
+                                    <p>Mampu menggunakan package <code>laravel/ui</code> untuk membuat sistem autentikasi seperti login, 
+                                        register, dan reset password tanpa perlu membuatnya dari nol.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-bootstrap me-2" style="color:var(--rose-accent)"></i>Integrasi Bootstrap</h6>
+                                    <p>Mampu mengintegrasikan template <strong>SB Admin 2</strong> berbasis Bootstrap ke dalam project Laravel 
+                                        untuk menghasilkan tampilan dashboard yang terstruktur.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-2">
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-layout-sidebar me-2" style="color:var(--rose-accent)"></i>Blade Templating</h6>
+                                    <p>Mampu membangun layout global menggunakan blade templating dengan direktif <code>@yield</code>, <code>@extends</code>,
+                                        <code>@section</code>, dan <code>@include</code> untuk menjaga konssitensi tampilan antar halaman.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                        <h6><i class="bi bi-people me-2" style="color:var(--rose-accent)"></i>CRUD Manajemen User</h6>
+                                        <p>Mampu membuat fitur Create, Read, Update, Delete (CRUD) untuk entitas pengguna menggunakan <strong>Resource Controller</strong>
+                                            di Laravel.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- C. Tools -->
+                    <div class="laprak-card" id="tools">
+                        <div class="card-header-custom">
+                            <div class="section-letter">C</div>
+                            <h3>Alat dan Tools yang Digunakan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="pill-list">
+                                <div class="pill"><i class="bi bi-laptop"></i>Laptop</div>
+                                <div class="pill"><i class="bi bi-server"></i>XAMPP</div>
+                                <div class="pill"><i class="bi bi-code-slash"></i>VS Code</div>
+                                <div class="pill"><i class="bi bi-puzzle"></i>Composer</div>
+                                <div class="pill"><i class="bi bi-git"></i>GIT</div>
+                                <div class="pill"><i class="bi bi-cpu"></i>Node JS</div>
+                                <div class="pill"><i class="bi bi-box"></i>NPM</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- D. Langkah Kerja -->
+                    <div class="laprak-card" id="langkah">
+                        <div class="card-header-custom">
+                            <div class="section-letter">D</div>
+                            <h3>Langkah Kerja</h3>
+                        </div>
+                        <div class="card-body-custom step-content">
+
+                            <!-- Membuat Project -->
+                            <div id="langkah1">
+                            <h5><i class="bi bi-database-gear me-2" style="color:var(--rose-accent)"></i>1. Membuat Project Laravel</h5>
+                            <p>Buat project Laravel deengan mengetikkan perintah berikut pada terminal: <code>composer create-project 
+                                laravel/laravel laravel-sisfo</code>.
+                            </p>
+                            <img src="../images/gambar102.png" class="laprak-img" alt="laravel project">
+                            </div>
+
+                            <!-- Konfigurasi DB -->
+                            <div id="langkah2">
+                            <h5><i class="bi bi-file-earmark-code me-2" style="color:var(--rose-accent)"></i>2. Konfigurasi Database</h5>
+                            <p>Buka file <code>.env</code> pada project, lalu sesuaikan konfigurasi database seperti berikut:
+                            </p>
+                            <img src="../images/gambar103.png" class="laprak-img" alt="konfigurasi database">
+                            </div>
+
+                            <!-- User Authentication -->
+                            <div id="langkah3">
+                            <h5><i class="bi bi-box-arrow-in-right me-2" style="color:var(--rose-accent)"></i>3. User Authentication</h5>
+                            <p>User authentication pada studi kasus ini menggunakan fitur authentication bawaan dari laravel melalui package <code>laravel/ui</code>.
+                            </p>
+                                <div class="container">
+                                    <div class="step-item">
+                                        <div class="step-num">1</div>
+                                        <div class="step-content">
+                                            <h5><strong>Install Package <code>laravel/ui</code></strong></h5>
+                                            <p>Buka terminal cmd kemudian ketikkan perintah berikut: <code>composer require laravel/ui</code>. Jika berhasil, maka akan 
+                                                muncul tampilan seperti gambar berikut.
+                                            </p>
+                                            <img src="../images/gambar104.png" class="laprak-img" alt="install laravel/ui">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">2</div>
+                                        <div class="step-content">
+                                            <h5><strong>Fitur Autentikasi</strong></h5>
+                                            <p>Jalankan perintah berikut untuk membuat fitur autentikasi secara otomatis menggunakan bootstrap: <code>php artisan ui bootstrap 
+                                                --auth</code>. Jika berhasil, maka akan muncul tampilan seperti berikut.
+                                            <img src="../images/gambar105.png" class="laprak-img" alt="authentication fitur">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">3</div>
+                                        <div class="step-content">
+                                            <h5><strong>Install dan Compile</strong></h5>
+                                            <p>Ketikkan perintah <code>npm install && npm run dev</code> untuk menginstall dan compile file-file asset bawaan, sehingga file-file
+                                                yang dibutuhkan untuk authentication akan di-generate secara otomatis seperti halaman login, register, dan forgot password.
+                                            <img src="../images/gambar106.png" class="laprak-img" alt="install dan compile">
+                                            <p>Selain controller, juga terdapat view untuk authentication seperti berikut.
+                                            </p>
+                                            <img src="../images/gambar107.png" class="laprak-img" alt="degenerate view">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">4</div>
+                                        <div class="step-content">
+                                            <h5><strong>Jalankan Migration</strong></h5>
+                                            <p>Ketikkan perintah <code>php artisan migrate</code> untuk membuat migration table authentication. Jika berhasil, maka aplikasi sisfo
+                                                sudah memiliki fitur authentication bawaan dari Laravel. Lakukan percobaan registrasi dan login, jika berhasil maka akan tampil
+                                                seperti gambar berikut.
+                                            </p>
+                                            <img src="../images/gambar108.png" class="laprak-img" alt="login">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                  
+                            <!-- Custom Table Users -->
+                            <div id="langkah4">
+                            <h5><i class="bi bi-table me-2" style="color:var(--rose-accent)"></i>4. Custom Table Users</h5>
+                            <p>Table <code>users</code> yang di-generate Laravel secara default hanya memiliki kolom <code>id</code>, <code>name</code>, <code>email</code>, <code>password</code>, 
+                                dan beberapa kolom timestamp. Dari struktur tersebut, kita perlu menambahkan beberapa field yaitu <code>username</code>, <code>level</code>, dan <code>status</code>.
+                            </p>
+                                <div class="container">
+                                    <div class="step-item">
+                                        <div class="step-num">1</div>
+                                        <div class="step-content">
+                                            <h5><strong>Buat Migration Baru</strong></h5>
+                                            <p>Buat migration untuk menambahkan field di atas dengan mengetikkan perintah berikut: <code>php artisan make:migration costum_table_users</code>. Selanjutnya, buka folder 
+                                                <code>database/migration</code> seperti gambar berikut.
+                                            </p>
+                                            <img src="../images/gambar109.png" class="laprak-img" alt="migration">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">2</div>
+                                        <div class="step-content">
+                                            <h5><strong>Isi File Migration</strong></h5>
+                                            <p>Buka file migration dengan nama <strong>custom_table_users.php</strong> lalu isikan dengan kode berikut.
+                                            </p>
+                                            <img src="../images/gambar110.png" class="laprak-img" alt="custom table users">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">3</div>
+                                        <div class="step-content">
+                                            <h5><strong>Jalankan Migration</strong></h5>
+                                            <p>Jalankan migration di file tersebut dengan mengetikkan perintah berikut: <code>php artisan migrate</code>. Setelah berhasil, maka struktur tabel
+                                                <code>users</code> akan memiliki 11 kolom, termasuk penambahan <code>username</code>, <code>level</code>, dan <code>status</code>.
+                                            </p>
+                                            <img src="../images/gambar111.png" class="laprak-img" alt="custom table users">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Seeding User Admin -->
+                            <div id="langkah5">
+                            <h5><i class="bi bi-person-check me-2" style="color:var(--rose-accent)"></i>5. Seeding User Admin</h5>
+                            <p>Setelah selesai mengatur tabel, kita perlu menambah user dengan menggunakan fitur seeding pada Laravel.
+                            </p>
+                                <div class="container">
+                                    <div class="step-item">
+                                        <div class="step-num">1</div>
+                                        <div class="step-content">
+                                            <h5><strong>Buat Seeding Baru</strong></h5>
+                                            <p>Buat seeding untuk menambahkan user admin mengetikkan perintah berikut: <code>php artisan make:seeder AdminSeeder</code>. Selanjutnya, buka folder 
+                                                <code>database/Seeder</code>. Buka file <strong>AdminSeeder.php</strong>, lalu isi dengan kode program berikut.
+                                            </p>
+                                            <img src="../images/gambar112.png" class="laprak-img" alt="seeder admin">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">2</div>
+                                        <div class="step-content">
+                                            <h5><strong>Jalankan Seeding</strong></h5>
+                                            <p>Jalankan seeding dengan perintah berikut: <code>php artisan db:seed --class=AdminSeeder</code>. Jika berhasil, user dapat login ke aplikasi menggunakan
+                                                akun tersebut.</p>
+                                            <img src="../images/gambar113.png" class="laprak-img" alt="login seeder">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Templating dan layouting -->
+                            <div id="langkah6">
+                            <h5><i class="bi bi-layout-split me-2" style="color:var(--rose-accent)"></i>6. Templating dan Layouting</h5>
+                            <p>Tampilan aplikasi dikonfigurasi menggunakan template <strong>SB Admin 2</strong> berbasis Bootstrap 4. Download template dari
+                                <code>https://startbootstrap.com/theme/sb-admin-2</code> kemudian ekstrak. Selanjutnya, copy semua asset template ke dalam folder <code>public/sbadmin</code>.
+                            </p>
+                                <div class="container">
+                                    <div class="step-item">
+                                        <div class="step-num">1</div>
+                                        <div class="step-content">
+                                            <h5><strong>Halaman Login Aplikasi</strong></h5>
+                                            <p>Buka file <strong>app.blade.php</strong> pada folder <code>view/layouts</code> lalu tambahkan kode berikut.
+                                            </p>
+                                            <img src="../images/gambar114.png" class="laprak-img" alt="app.blade.php">
+                                            <p>Buka halaman login maka akan muncul tampilan seperti berikut.
+                                            </p>
+                                            <img src="../images/gambar115.png" class="laprak-img" alt="halaman login">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">2</div>
+                                        <div class="step-content">
+                                            <h5><strong>Layout Global</strong></h5>
+                                            <p>Buat file baru <code>views/layouts/main.blade.php</code> sebagai layout utama aplikasi. Isi file tersebut dengan kode berikut.
+                                            </p>
+                                            <img src="../images/gambar116.png" class="laprak-img" alt="main.blade.php1">
+                                            <img src="../images/gambar117.png" class="laprak-img" alt="main.blade.php2">
+                                            <div class="callout">
+                                                <strong>Penjelasan direktif Blade:</strong><br>
+                                                <code>@include</code>: menyertakan view lain ke dalam layout.<br>
+                                                <code>@yield('nama')</code>: mendefinisikan slot yang akan diisi oleh halaman child.<br>
+                                                <code>@extends('layouts.main')</code>: digunakan oleh halaman child untuk mewarisi layout main.<br>
+                                                <code>@section('nama')- @endsection</code>: mengisi slot yang didefinisikan <code>@yield</code>.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">3</div>
+                                        <div class="step-content">
+                                            <h5><strong>Sidebar</strong></h5>
+                                            <p>Buat file <code>views/layouts/sidebar.blade.php</code> yang berisi navigasi sidebar dengan menu Dashboard dan Users. Isi file dengan
+                                                kode berikut.
+                                            </p>
+                                            <img src="../images/gambar118.png" class="laprak-img" alt="sidebar.blade.php">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">4</div>
+                                        <div class="step-content">
+                                            <h5><strong>Topbar</strong></h5>
+                                            <p>Buat file <code>views/layouts/topbar.blade.php</code> yang memuat nama user yang sedang login dan tombol logout dengan modal konfirmasi. Isi file 
+                                                dengan kode berikut.
+                                            </p>
+                                            <img src="../images/gambar119.png" class="laprak-img" alt="topbar.blade.php">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">5</div>
+                                        <div class="step-content">
+                                            <h5><strong>Home</strong></h5>
+                                            <p>Buka file <code>views/home.blade.php</code> lalu isikan dengan kode program berikut.
+                                            </p>
+                                            <img src="../images/gambar120.png" class="laprak-img" alt="home.blade.php">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">6</div>
+                                        <div class="step-content">
+                                            <h5><strong>Dashboard</strong></h5>
+                                            <p>Jika konfigurasi berhasil, maka tampilan halaman dashboard akan muncul seperti berikut.
+                                            </p>
+                                            <img src="../images/gambar121.png" class="laprak-img" alt="dashboard">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Manajemen Users -->
+                            <div id="langkah7">
+                            <h5><i class="bi bi-people me-2" style="color:var(--rose-accent)"></i>7. Manajemen Users (CRUD)</h5>
+                            <p>Fitur manajemen pengguna dibuat menggunakan Resource Controller yang secara otomatis mengatur operasi CRUD 
+                                ke dalam method yang sudah terstruktur di Laravel.
+                            </p>
+                                <div class="container">
+                                    <div class="step-item">
+                                        <div class="step-num">1</div>
+                                        <div class="step-content">
+                                            <h5><strong>Buat Resource Controller</strong></h5>
+                                            <p>Jalankan perintah <code>php artisan make:controller UserController --resource</code> lalu tambahkan route resource pada <code>routes/web.php</code> 
+                                                seperti berikut.
+                                            </p>
+                                            <img src="../images/gambar122.png" class="laprak-img" alt="route UserController">
+                                            <p>Selanjutnya, lihat pemetaan route <code>php artisan route:list</code> seperti berikut.
+                                            </p>
+                                            <img src="../images/gambar123.png" class="laprak-img" alt="list route">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">2</div>
+                                        <div class="step-content">
+                                            <h5><strong>CREATE</strong></h5>
+                                            <p>Isi action <code>create()</code> untuk menampilkan form, dan <code>store()</code> untuk menyimpan data seperti berikut.
+                                            </p>
+                                            <img src="../images/gambar124.png" class="laprak-img" alt="tambah user baru">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">3</div>
+                                        <div class="step-content">
+                                            <h5><strong>Blade Create</strong></h5>
+                                            <p>Buat folder <strong>user</strong> di dalam <strong>view</strong>, lalu tambahkian file <strong>create.blade.php</strong>. Isikan dengan kode berikut.
+                                            </p>
+                                            <img src="../images/gambar125.png" class="laprak-img" alt="create.blade.php">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">4</div>
+                                        <div class="step-content">
+                                            <h5><strong>Tampilan Form Input User</strong></h5>
+                                            <p>Buka halaman <code>/users/create</code>, jika konfigurasi berhasil maka akan muncul tampilan seperti berikut.
+                                            </p>
+                                            <img src="../images/gambar126.png" class="laprak-img" alt="tampilan form input user">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">5</div>
+                                        <div class="step-content">
+                                            <h5><strong>READ</strong></h5>
+                                            <p>Buka action <code>index()</code> pada <strong>UserController</strong>, lalu tambahkan kode berikut.
+                                            </p>
+                                            <img src="../images/gambar127.png" class="laprak-img" alt="index()">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">5</div>
+                                        <div class="step-content">
+                                            <h5><strong>Blade Index</strong></h5>
+                                            <p>Buat file dengan nama <strong>index.blade.php</strong> lalu isi dengan kode berikut.
+                                            </p>
+                                            <img src="../images/gambar128.png" class="laprak-img" alt="index.blade.php">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">6</div>
+                                        <div class="step-content">
+                                            <h5><strong>Tampilan Halaman List User</strong></h5>
+                                            <p>Buka halaman <code>/users</code> maka akan muncul tampilan list user seperti berikut.
+                                            </p>
+                                            <img src="../images/gambar129.png" class="laprak-img" alt="list user">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">7</div>
+                                        <div class="step-content">
+                                            <h5><strong>UPDATE</strong></h5>
+                                            <p>Buka action <code>edit()</code> dan <code>update</code> lalu isi dengan kode berikut.
+                                            </p>
+                                            <img src="../images/gambar130.png" class="laprak-img" alt="edit()">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">8</div>
+                                        <div class="step-content">
+                                            <h5><strong>Blade Edit</strong></h5>
+                                            <p>Buat file dengan nama <strong>edit.blade.php</strong> lalu isikan dengan kode berikut.
+                                            </p>
+                                            <img src="../images/gambar131.png" class="laprak-img" alt="edit.blade.php">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">9</div>
+                                        <div class="step-content">
+                                            <h5><strong>Tampilan Halaman Edit</strong></h5>
+                                            <p>Buka halaman <code>users/(id)/edit</code>, maka akan muncul tampilan seperti berikut.
+                                            </p>
+                                            <img src="../images/gambar132.png" class="laprak-img" alt="halaman edit">
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="step-num">10</div>
+                                        <div class="step-content">
+                                            <h5><strong>DELETE</strong></h5>
+                                            <p>Buka action <code>destroy()</code> pada <strong>UserController</strong> lalu tambahkan kode program berikut.
+                                            </p>
+                                            <img src="../images/gambar133.png" class="laprak-img" alt="destroy()">
+                                        </div>
+                                    </div>  
+                                    <div class="step-item">
+                                        <div class="step-num">11</div>
+                                        <div class="step-content">
+                                            <h5><strong>Halaman Tampilan Delete</strong></h5>
+                                            <p>Jika tombol hapus diklik, maka akan muncul pop-up dialog peringatan seperti berikut ini.
+                                            </p>
+                                            <img src="../images/gambar134.png" class="laprak-img" alt="pop-up dialog">
+                                            <p>Jika tombol OK ditekan, maka data akan terhapus dan muncul pesan berhasil seperti berikut.
+                                            </p>
+                                            <img src="../images/gambar135.png" class="laprak-img" alt="pesan sukses saat data dihapus">
+                                        </div>
+                                    </div>  
+                                </div>                  
+                            </div>
+
+                            <!-- Menambahkan Menu Users -->
+                            <div id="langkah8">
+                            <h5><i class="bi bi-layout-sidebar-inset me-2" style="color:var(--rose-accent)"></i>8. Sidebar Users</h5>
+                            <p>Pada <strong>sidebar.blade.php</strong>, tambahkan kode program berikut.
+                            </p>
+                            <img src="../images/gambar136.png" class="laprak-img" alt="sidebar users">
+                            <p>Maka, pada aplikasi akan muncul menu users seperti berikut.
+                            </p>
+                            <img src="../images/gambar137.png" class="laprak-img" alt="tampilan sidebar">
+                            </div>
+                        </div>
+                    </div>     
+
+                    <!-- E. Kesimpulan -->
+                    <div class="laprak-card" id="kesimpulan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">E</div>
+                            <h3>Kesimpulan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Dari praktikum yang telah dilakukan, telah dipelajari cara membangun aplikasi Laravel yang memiliki sistem autentikasi, tampilan
+                                konsisten, dan fitur manajemen data pengguna secara lengkap. Konsep utama dalam praktikum ini adalah sebagai berikut.
+                            </p>
+                            <table class="laprak-table">
+                                <thead>
+                                    <tr><th>Perintah</th><th>Keterangan</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>composer require laravel/ui</code></td>
+                                        <td>Menginstall package autentikasi Laravel</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>php artisan ui bootstrap --auth</code></td>
+                                        <td>Membuat controller, view, dan route autentikasi berbasis Bootstrap secara otomatis</td>
+                                        </tr>
+                                    <tr>
+                                        <td><code>@yield / @ssection / @extends</code></td>
+                                        <td>Direktif Blade untuk membuat layout global yang dapat diturunkan ke halaman child</td>
+                                        </tr>
+                                    <tr>
+                                        <td><code>@include</code></td>
+                                        <td>Menyertakan partial view (sidebar dan topbar) ke dalam layout utama</td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td><code>Route::resource</code></td>
+                                        <td>Mendaftarkan 7 route CRUD untuk sebuah resource controller</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>Hash::make()</code></td>
+                                        <td>Mengenkripsi password sebelum disimpan ke database</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Repository Github -->
+                    <div class="laprak-card" id="github">
+                        <div class="card-header-custom">
+                            <div class="section-letter">G</div>
+                            <h3>Repository Github</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Kode project dapat diakses melalui repository Github berikut.</p>
+                            <a href="https://github.com/amelianiisrina/PemrogramanWeb/tree/main/Prak9/laravel-sisfo" class="btn-pink" target="_blank">
+                                <i class="bi bi-github"></i> Buka Github
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="container text-center mt-5">
+                        <a href="../pweb.html" class="btn-pink" target="_blank"><i class="bi bi-arrow-left"></i>BACK</a>
+                    </div>
+
+                </div>        
+            </div>
+            </div>
+        </section>  
+        
+        <section id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <h5>Niisrina Amelia</h5>
+                            <p>A computer science student who loves trying out new things and exploring creative ideas. Based in Padang, Indonesia.</p>
+                            <p style="font-size:0.82rem;">&copy; 2025 Niisrina Amelia. All rights reserved.</p>
+                        </div>
+
+                        <div class="col-6">
+                            <h5 class="text-center mb-4">Contact</h5>
+                            <div class="row justify-content-center g-3">
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://www.instagram.com/rnliea?igsh=ODRmOW8xZ2VuMGZ5" target="_blank" style="text-decoration: none;">
+                                        <i class="bi bi-instagram" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://id.linkedin.com/in/niisrina-amelia-41481531b" target="_blank" style="text-decoration: none;">
+                                        <i class="bi bi-linkedin" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="mailto:amelianiisrina@gmail.com" style="text-decoration: none;">
+                                        <i class="bi bi-envelope-at" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://discordapp.com/users/1295724095627067434" style="text-decoration: none;">
+                                        <i class="bi bi-discord" style="font-size: 40px"></i>
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+</body>
+</html>
+                            
