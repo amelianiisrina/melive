@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Laporan Praktikum 4</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/CSS/custom.css">
+        <link rel="stylesheet" href="https://melive.ifportofolio.com/CSS/report.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <div class="navbar-brand d-flex align-items-center gap-2">
+                <img src="../images/logo.png" alt="logo" width="40" class="me-2">
+                <span>Laporan Praktikum 4</span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../portofolio.html">Projects</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../report.html">Report</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+        <header class="laprak-header text-center">
+            <div class="position-relative" style="z-index:1">
+                <div class="hero-badge">Aplikasi Mobile</div>
+                <h1>Laporan Praktikum 4</h1>
+                <p>Navigasi & Passing Data</p>
+            </div>
+        </header>
+
+    <!-- Konten Utama -->
+        <section class="content-section">
+            <div class="container">
+                <div class="row g-4">
+
+                <!-- Daftar Isi -->
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="toc-sticky">
+                            <div class="toc-card">
+                                <div class="toc-title"><i class="bi bi-journal-bookmark-fill me-2" style="color:var(--rose-accent)"></i>Daftar Isi</div>
+                                <a class="toc-link" href="#pendahuluan">
+                                    <i class="bi bi-chevron-right"></i>A. Pendahuluan</a>
+                                <a class="toc-link" href="#tujuan">
+                                    <i class="bi bi-chevron-right"></i>B. Tujuan Praktikum</a>
+                                <a class="toc-link" href="#tools">
+                                    <i class="bi bi-chevron-right"></i>C. Alat & Tools</a>
+                                <a class="toc-link" href="#langkah">
+                                    <i class="bi bi-chevron-right"></i>D. Langkah Kerja</a>
+                                <a class="toc-link" href="#tugas">
+                                    <i class="bi bi-chevron-right"></i>E. Tugas</a>
+                                <a class="toc-link" href="#kesimpulan">
+                                    <i class="bi bi-chevron-right"></i>F. Kesimpulan</a>
+                                <a class="toc-link" href="#github">
+                                    <i class="bi bi-chevron-right"></i>G. Repository Github</a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Materi -->
+                <div class="col-lg-9">
+
+                    <!-- A. Pendahuluan -->
+                    <div class="laprak-card" id="pendahuluan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">A</div>
+                            <h3>Pendahuluan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Praktikum ini membahas penggunaan dasar navigasi halaman pada aplikasi Flutter menggunakan
+                                Navigator dengan konsep tumpukan (stack). Materi meliputi penggunaan fungsi push untuk
+                                berpindah ke halaman baru dan pop untuk kembali ke halaman sebelumnya. Selain itu, praktikum
+                                membahas penggunaan constructor dan passing data antar halaman dengan variabel final serta
+                                keyword required. Konsep tersebut diterapkan pada pembuatan aplikasi sederhana yang dapat
+                                melakukan perpindahan halaman sekaligus mengirimkan data dari satu halaman ke halaman
+                                lainnya.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- B. Tujuan -->
+                    <div class="laprak-card" id="tujuan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">B</div>
+                            <h3>Tujuan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="row g-3 mb-2">
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-arrow-left-right me-2" style="color:var(--rose-accent)"></i>Navigasi Antarhalaman</h6>
+                                    <p>Menerapkan <code>Navigator.push</code> untuk berpindah ke halaman baru dan <code>Navigator.pop</code> untuk 
+                                        kembali atau menutup halaman yang sedang dibuka.
+                                    </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-send me-2" style="color:var(--rose-accent)"></i>Passing Data Antarhalaman</h6>
+                                    <p>Menerapkan pengiriman data seperti <code>String</code> dan <code>int</code> antarhalaman menggunakan 
+                                        Constructor.
+                                    </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- C. Tools -->
+                    <div class="laprak-card" id="tools">
+                        <div class="card-header-custom">
+                            <div class="section-letter">C</div>
+                            <h3>Alat dan Tools yang Digunakan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="pill-list">
+                                <div class="pill"><i class="bi bi-laptop"></i>Laptop</div>
+                                <div class="pill"><i class="bi bi-code-square"></i>Flutter SDK</div>
+                                <div class="pill"><i class="bi bi-code-slash"></i>VS Code</div>
+                                <div class="pill"><i class="bi bi-braces"></i>Dart</div>
+                                <div class="pill"><i class="bi bi-git"></i>GIT</div>
+                                <div class="pill"><i class="bi bi-google"></i>Google Chrome</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- D. Langkah Kerja -->
+                    <div class="laprak-card" id="langkah">
+                        <div class="card-header-custom">
+                            <div class="section-letter">D</div>
+                            <h3>Langkah Kerja</h3>
+                        </div>
+                        <div class="card-body-custom step-content">
+
+                            <div class="step-item">
+                                <div class="step-num">1</div>
+                                <div class="step-content">
+                                    <h5>Konfigurasi Aplikasi dan Tema</h5>
+                                    <p>Menyusun konfigurasi aplikasi pada <strong>main.dart</strong> untuk mengatur tema warna aplikasi 
+                                        menjadi merah serta menentukan <strong>DashboardScreen</strong> sebagai halaman utama
+                                        yang pertama kali ditampilkan.</p>
+                                    <img src="../images/gambar170.png" class="laprak-img" alt="main.dart">
+                                </div>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-num">2</div>
+                                <div class="step-content">
+                                    <h5>Menyusun Dashboard dan Navigasi</h5>
+                                    <p>Buat file <strong>dashboard_screen.dart</strong> pada folder <strong>lib</strong> sebagai halaman utama
+                                        aplikasi yang menampilkan saldo dan daftar transaksi.
+                                    </p>
+                                    <img src="../images/gambar171.png" class="laprak-img" alt="dashboard_screen.dart">
+                                    <p>Halaman <strong>DashboardScreen</strong> digunakan untuk menampilkan saldo utama, daftar transaksi terakhir,
+                                        serta tombol tambah transaksi. Tombol tambah digunakan untuk berpindah ke halaman <strong>AddTransactionScreen</strong>
+                                        menggunakan <code>Navigator.push</code>. Data transaksi yang telah disimpan kemudian diterima kembali dan
+                                        ditampilkan pada Dashboard. Setiap transaksi juga dapat diklik untuk berpindah ke halaman <strong>TransactionDetailScreen</strong>
+                                        dengan membawa data transaksi.</p>
+                                </div>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-num">3</div>
+                                <div class="step-content">
+                                    <h5>Menambahkan Form Transaksi</h5>
+                                    <p>Buat file <strong>add_transaction_screen.dart</strong> pada folder <strong>lib</strong> sebagai halaman untuk
+                                        mencatat transaksi baru.
+                                    </p>
+                                    <img src="../images/gambar172.png" class="laprak-img" alt="add_transaction_screen.dart">
+                                    <p>Halaman <strong>AddTransactionScreen</strong> digunakan untuk menampilkan form input judul dan nominal yang dilengkapi dengan
+                                        validasi. Tombol Simpan digunakan untuk memvalidasi form dan mengirim data transaksi kembali ke halaman Dashboard menggunakan
+                                        <code>Navigator.pop</code>.</p>
+                                </div>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-num">4</div>
+                                <div class="step-content">
+                                    <h5>Membuat Halaman Detail Transaksi</h5>
+                                    <p>Buat file <strong>transaction_detail_screen.dart</strong> pada folder <strong>lib</strong> sebagai halaman untuk menampilkan
+                                        detail transaksi yang dipilih.</p>
+                                    <img src="../images/gambar173.png" class="laprak-img" alt="transaction_detail_screen.dart">
+                                    <p>Halaman <strong>TransactionDetailScreen</strong> digunakan untuk menerima data transaksi seperti judul, nominal, kategori, dan tanggal melalui
+                                        <strong>Constructor</strong> dengan <code>required</code>. Data tersebut kemudian ditampilkan pada halaman detail, sehingga
+                                        informasi transaksi yang dipilih dari Dashboard dapat ditampilkan secara lengkap.</p>
+                                </div>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-num">5</div>
+                                <div class="step-content">
+                                    <h5>Jalankan Program</h5>
+                                    <p>Saat aplikasi dijalankan, <strong>DashboardScreen</strong> menjadi halaman utama yang menampilkan saldo 
+                                        utama dan daftar transaksi terakhir. Pada halaman ini terdapat tombol + untuk menambahkan transaksi baru.</p>
+                                    <img src="../images/gambar174.png" class="laprak-img" alt="Halaman Dashboard">
+                                    <p>Tombol + pada Dashboard ditekan untuk berpindah ke <strong>AddTransactionScreen</strong>. Halaman ini digunakan untuk mengisi judul
+                                        dan nominal transaksi, kemudian data dapat disimpan menggunakan tombol <strong>Simpan</strong>.</p>
+                                    <img src="../images/gambar175.png" class="laprak-img" alt="Halaman Tambah Transaksi">
+                                    <p>Setelah kembali ke Dashboard, transaksi yang telah ditambahkan dapat ditekan untuk berpindah ke <strong>TransactionDetailScreen</strong>.
+                                        Halaman ini menampilkan detail transaksi berupa judul, nominal, kategori, dan tanggal.</p>
+                                    <img src="../images/gambar176.png" class="laprak-img" alt="Halaman Detail Transaksi">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!-- E. Tugas -->
+                    <div class="laprak-card" id="tugas">
+                        <div class="card-header-custom">
+                            <div class="section-letter">E</div>
+                            <h3>Tugas</h3>
+                        </div>
+
+                        <div class="card-body-custom step-content">
+
+                            <div class="step-item">
+                                <div class="step-num">1</div>
+                                <div class="step-content">
+                                    <h5>Input Tanggal</h5>
+                                    <p>Tambahkan satu input baru sebelum tombol Simpan untuk mengisi tanggal transaksi. Dapat menggunakan TektFormField
+                                        biasa atau <strong>showDatePicker</strong>.
+                                    </p>
+                                    <div class="row g-3 mb-2">
+                                        <div class="col-md-6">
+                                        <img src="../images/gambar177.png" class="laprak-img" alt="source code">
+                                        </div>
+                                        <div class="col-md-6">
+                                        <img src="../images/gambar180.png" class="laprak-img" alt="output">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- F. Kesimpulan -->
+                    <div class="laprak-card" id="kesimpulan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">F</div>
+                            <h3>Kesimpulan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Pada praktikum ini, aplikasi <strong>Expense Tracker</strong> dikembangkan dengan menerapkan konsep navigasi antarhalaman
+                                menggunakan <code>Navigator.push</code> dan <code>Navigator.pop</code>. Aplikasi memiliki tiga halaman utama, yaitu
+                                <strong>DashboardScreen</strong> sebagai halaman utama, <strong>AddTransactionScreen</strong> untuk menambahkan transaksi,
+                                dan <strong>TransactionDetailScreen</strong> untuk menampilkan detail transaksi. Selain itu, diterapkan juga konsep
+                                passing data melalui <strong>Constructor</strong> serta validasi form dan pemilihan tanggal menggunakan <code>showDatePicker</code>.
+                                Dengan penerapan tersebut, pengguna dapat berpindah antarhalaman dan mengirimkan data transaksi sesuai kebutuhan aplikasi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- G. Repository Github -->
+                    <div class="laprak-card" id="github">
+                        <div class="card-header-custom">
+                            <div class="section-letter">G</div>
+                            <h3>Repository Github</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Kode project dapat diakses melalui repository Github berikut.</p>
+                            <a href="https://github.com/amelianiisrina/AplikasiMobile_KelasA/tree/pertemuan-04/Praktikum%204/prak4_appmob" class="btn-pink" target="_blank">
+                                <i class="bi bi-github"></i> Buka Github
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="container text-center mt-5">
+                        <a href="../apmob.html" class="btn-pink" target="_blank"><i class="bi bi-arrow-left"></i>BACK</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <h5>Niisrina Amelia</h5>
+                            <p>A computer science student who loves trying out new things and exploring creative ideas. Based in Padang, Indonesia.</p>
+                            <p style="font-size:0.82rem;">&copy; 2025 Niisrina Amelia. All rights reserved.</p>
+                        </div>
+
+                        <div class="col-6">
+                            <h5 class="text-center mb-4">Contact</h5>
+                            <div class="row justify-content-center g-3">
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://www.instagram.com/rnliea?igsh=ODRmOW8xZ2VuMGZ5" target="_blank" style="text-decoration: none;">
+                                        <i class="bi bi-instagram" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://id.linkedin.com/in/niisrina-amelia-41481531b" target="_blank" style="text-decoration: none;">
+                                        <i class="bi bi-linkedin" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="mailto:amelianiisrina@gmail.com" style="text-decoration: none;">
+                                        <i class="bi bi-envelope-at" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://discordapp.com/users/1295724095627067434" style="text-decoration: none;">
+                                        <i class="bi bi-discord" style="font-size: 40px"></i>
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+</body>
+</html>
+                            
