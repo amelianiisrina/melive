@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Laporan Praktikum 5</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/CSS/custom.css">
+        <link rel="stylesheet" href="https://melive.ifportofolio.com/CSS/report.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <div class="navbar-brand d-flex align-items-center gap-2">
+                <img src="../images/logo.png" alt="logo" width="40" class="me-2">
+                <span>Laporan Praktikum 5</span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../portofolio.html">Projects</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../report.html">Report</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+        <header class="laprak-header text-center">
+            <div class="position-relative" style="z-index:1">
+                <div class="hero-badge">Aplikasi Mobile</div>
+                <h1>Laporan Praktikum 5</h1>
+                <p>Named Routes & Bottom Navigation Bar</p>
+            </div>
+        </header>
+
+    <!-- Konten Utama -->
+        <section class="content-section">
+            <div class="container">
+                <div class="row g-4">
+
+                <!-- Daftar Isi -->
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="toc-sticky">
+                            <div class="toc-card">
+                                <div class="toc-title"><i class="bi bi-journal-bookmark-fill me-2" style="color:var(--rose-accent)"></i>Daftar Isi</div>
+                                <a class="toc-link" href="#pendahuluan">
+                                    <i class="bi bi-chevron-right"></i>A. Pendahuluan</a>
+                                <a class="toc-link" href="#tujuan">
+                                    <i class="bi bi-chevron-right"></i>B. Tujuan Praktikum</a>
+                                <a class="toc-link" href="#tools">
+                                    <i class="bi bi-chevron-right"></i>C. Alat & Tools</a>
+                                <a class="toc-link" href="#langkah">
+                                    <i class="bi bi-chevron-right"></i>D. Langkah Kerja</a>
+                                <a class="toc-link" href="#tugas">
+                                    <i class="bi bi-chevron-right"></i>E. Tugas</a>
+                                <a class="toc-link" href="#project">
+                                    <i class="bi bi-chevron-right"></i>F. Project</a>
+                                <a class="toc-link" href="#github">
+                                    <i class="bi bi-chevron-right"></i>G. Repository Github</a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Materi -->
+                <div class="col-lg-9">
+
+                    <!-- A. Pendahuluan -->
+                    <div class="laprak-card" id="pendahuluan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">A</div>
+                            <h3>Pendahuluan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Praktikum ini membahas penggunaan <strong>Named Routes</strong> dan <strong>Bottom Navigation Bar</strong>
+                                pada aplikasi Flutter. Materi meliputi penggunaan <code>routes</code> untuk mendefinisikan rute setiap halaman
+                                dan <code>initialRoute</code> untuk menentukan halaman pertama yang ditampilkan. Selain itu, praktikum 
+                                membahas penggunaan <strong>Bottom Navigation Bar</strong> untuk memudahkan perpindahan antarhalaman utama
+                                melalui ikon dan label navigasi. Konsep tersebut diterapkan pada pembuatan aplikasi sederhana yang memiliki
+                                navigasi terstruktur sehingga pengguna dapat berpindah antarhalaman dengan lebih mudah dan terorganisasi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- B. Tujuan -->
+                    <div class="laprak-card" id="tujuan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">B</div>
+                            <h3>Tujuan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="row g-3 mb-2">
+                                <div class="col-md-4">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-signpost-split-fill me-2" style="color:var(--rose-accent)"></i>Penerapan Named Routes</h6>
+                                    <p>Menerapkan Named Routes untuk mengatur navigasi antarhalaman secara terpusat, terstruktur, dan rapi.
+                                    </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-phone me-2" style="color:var(--rose-accent)"></i>Bottom Navigation Bar</h6>
+                                    <p>Membangun menu navigasi di bagian bawah layar menggunakan BottomNavigationBar untuk memudahkan perpindahan
+                                        antarhalaman.
+                                    </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-grid-1x2-fill me-2" style="color:var(--rose-accent)"></i>Integrasi Halaman</h6>
+                                    <p>Mengintegrasikan halaman Dashboard, Riwayat, dan Profil ke dalam satu struktur aplikasi dengan navigasi yang
+                                        konsisten.
+                                    </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- C. Tools -->
+                    <div class="laprak-card" id="tools">
+                        <div class="card-header-custom">
+                            <div class="section-letter">C</div>
+                            <h3>Alat dan Tools yang Digunakan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="pill-list">
+                                <div class="pill"><i class="bi bi-laptop"></i>Laptop</div>
+                                <div class="pill"><i class="bi bi-code-square"></i>Flutter SDK</div>
+                                <div class="pill"><i class="bi bi-code-slash"></i>VS Code</div>
+                                <div class="pill"><i class="bi bi-braces"></i>Dart</div>
+                                <div class="pill"><i class="bi bi-git"></i>GIT</div>
+                                <div class="pill"><i class="bi bi-google"></i>Google Chrome</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- D. Langkah Kerja -->
+                    <div class="laprak-card" id="langkah">
+                        <div class="card-header-custom">
+                            <div class="section-letter">D</div>
+                            <h3>Langkah Kerja</h3>
+                        </div>
+                        <div class="card-body-custom step-content">
+
+                            <div class="step-item">
+                                <div class="step-num">1</div>
+                                <div class="step-content">
+                                    <h5>Konfigurasi Named Routes</h5>
+                                    <p>Mengatur tema aplikasi serta mendefinisikan rute halaman menggunakan <code>routes</code> dan menentukan halaman
+                                        awal melalui <code>initialRoute</code>.</p>
+                                    <img src="../images/gambar181.png" class="laprak-img" alt="main.dart">
+                                </div>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-num">2</div>
+                                <div class="step-content">
+                                    <h5>Pengaturan Main Screen dan Bottom Navigation Bar</h5>
+                                    <p>Mengatur tampilan Dashboard, Riwayat, dan Profil serta perpindahan tab menggunakan <code>BottomNavigationBar</code> 
+                                        dan <code>setState()</code> untuk memperbarui indeks halaman aktif.
+                                    </p>
+                                    <img src="../images/gambar182.png" class="laprak-img" alt="main_screen.dart">
+                                </div>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-num">3</div>
+                                <div class="step-content">
+                                    <h5>Pembaruan Navigasi pada Dashboard</h5>
+                                    <p>Mengubah navigasi tombol tambah transaksi dari <code>Navigator.push</code> menjadi <code>Navigator.pushNamed</code> agar
+                                        perpindahan ke halaman form input menggunakan Named Routes <code>/add</code>.
+                                    </p>
+                                    <img src="../images/gambar183.png" class="laprak-img" alt="dashboard_screen.dart">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!-- E. Tugas -->
+                    <div class="laprak-card" id="tugas">
+                        <div class="card-header-custom">
+                            <div class="section-letter">E</div>
+                            <h3>Tugas</h3>
+                        </div>
+
+                        <div class="card-body-custom step-content">
+
+                            <div class="step-item">
+                                <div class="step-num">1</div>
+                                <div class="step-content">
+                                    <h5>Halaman riwayat transaksi</h5>
+                                    <div class="row g-3 mb-2">
+                                        <div class="col-md-6">
+                                        <img src="../images/gambar184.png" class="laprak-img" alt="source code">
+                                        </div>
+                                        <div class="col-md-6">
+                                        <img src="../images/gambar185.png" class="laprak-img" alt="output">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">2</div>
+                                <div class="step-content">
+                                    <h5>Halaman profile dengan avatar, nama, email, dan tombol logout</h5>
+                                    <div class="row g-3 mb-2">
+                                        <div class="col-md-6">
+                                        <img src="../images/gambar186.png" class="laprak-img" alt="source code">
+                                        </div>
+                                        <div class="col-md-6">
+                                        <img src="../images/gambar187.png" class="laprak-img" alt="output">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">3</div>
+                                <div class="step-content">
+                                    <h5>Halaman login yang berisi textfield email dan password serta tombol login</h5>
+                                    <p>Saat tombol login diklik, maka akan tampil halaman utama dan aplikasi dan menampilkan informasi email
+                                        yang diinputkan oleh user.</p>
+                                    <div class="row g-3 mb-2">
+                                        <div class="col-md-6">
+                                        <img src="../images/gambar188.png" class="laprak-img" alt="source code">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="row g-3">
+                                                <div class="col-12">
+                                                    <img src="../images/gambar189.png" class="laprak-img" alt="output">
+                                                </div>
+                                                <div class="col-12">
+                                                    <img src="../images/gambar190.png" class="laprak-img" alt="output">
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- F. Project -->
+                    <div class="laprak-card" id="project">
+                        <div class="card-header-custom">
+                            <div class="section-letter">F</div>
+                            <h3>Project</h3>
+                        </div>
+
+                        <div class="card-body-custom step-content">
+
+                            <div class="step-item">
+                                <div class="step-num">1</div>
+                                <div class="step-content">
+                                    <h5>Deskripsi Project</h5>
+                                    <p>Project ini merupakan hasil penggabungan dan pengembangan kode dari Praktikum 1 hingga 5 menjadi 
+                                        satu aplikasi <strong>Expense Tracker</strong> berbasis Flutter. Aplikasi ini mengintegrasikan berbagai
+                                        halaman dan fitur, seperti dashboard, tambah transaksi, riwayat, dan profil, dengan navigasi yang terstruktur.
+                                        Project kemudian dibangun menjadi file APK agar dapat dijalankan pada perangkat Android.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-num">2</div>
+                                <div class="step-content">
+                                    <h5>Implementasi Project</h5>
+                                    <div class="row g-3 mb-2">
+                                        <h6>Konfigurasi dan Navigasi</h6>
+                                        <div class="col-md-6">
+                                        <img src="../images/gambar191.png" class="laprak-img" alt="main.dart">
+                                        </div>
+                                        <div class="col-md-6">
+                                        <img src="../images/gambar192.png" class="laprak-img" alt="main_screen.dart">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-2">
+                                        <h6>Fitur Transaksi</h6>
+                                        <div class="col-md-6">
+                                        <img src="../images/gambar193.jpeg" class="laprak-img" alt="halaman transaksi">
+                                        </div>
+                                        <div class="col-md-6">
+                                        <img src="../images/gambar194.jpeg" class="laprak-img" alt="form tambah transaksi">
+                                        </div>
+                                    </div>
+                                    <div class="row g-3 mb-2">
+                                        <h6>Tampilan Aplikasi</h6>
+                                        <div class="row g-3">
+                                            <div class="col-md-12">
+                                            <img src="../images/gambar193.jpeg" class="laprak-img" alt="dashboard">
+                                            </div>
+                                            <div class="col-md-12">
+                                            <img src="../images/gambar195.jpeg" class="laprak-img" alt="riwayat transaksi">
+                                            </div>
+                                            <div class="col-md-12">
+                                            <img src="../images/gambar196.jpeg" class="laprak-img" alt="profil">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-num">3</div>
+                                <div class="step-content">
+                                    <h5>Build APK dan Pengujian</h5>
+                                    <p>Aplikasi dibangun menjadi file APK menggunakan perintah <code>flutter build apk --release</code>.
+                                        File APK yang dihasilkan kemudian dipasang pada perangkat Android untuk menguji tampilan dan fungsi aplikasi
+                                        secara langsung.</p>
+                                    <div class="row g-3 mb-2">
+                                        <div class="col-md-12">
+                                        <img src="../images/gambar197.png" class="laprak-img" alt="build APK">
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="step-item">
+                                <div class="step-num">4</div>
+                                <div class="step-content">
+                                    <h5>File Project</h5>
+                                    <p>Source code dan file pendukung aplikasi Expense Tracker dapat diakses melalui tautan berikut.</p>
+
+                                    <div class="row g-3 mb-2">
+                                        <div class="col-md-6">
+                                            <div class="project-file-card">
+                                                <div class="project-file-icon">
+                                                    <i class="bi bi-github"></i>
+                                                </div>
+                                                <h6>Source Code</h6>
+                                                <p>Akses kode program lengkap aplikasi Expense Tracker.</p>
+                                                <a href="https://github.com/amelianiisrina/AplikasiMobile_KelasA/tree/project-appmob/Project%20Aplikasi%20Mobile/project_appmob"
+                                                class="btn-pink project-file-btn"
+                                                target="_blank" rel="noopener noreferrer">
+                                                    Buka Source Code
+                                                    <i class="bi bi-arrow-up-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="project-file-card">
+                                                <div class="project-file-icon">
+                                                    <i class="bi bi-google"></i>
+                                                </div>
+                                                <h6>Google Drive</h6>
+                                                <p>File APK Expense Tracker dan video penjelasan project.</p>
+                                                <a href="https://drive.google.com/drive/folders/1UI-iLtDoaoC2Jj9upFGAgkzLxdbwd-PT?usp=sharing"
+                                                class="btn-pink project-file-btn"
+                                                target="_blank" rel="noopener noreferrer">
+                                                    Buka Google Drive
+                                                    <i class="bi bi-arrow-up-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!-- G. Repository Github -->
+                    <div class="laprak-card" id="github">
+                        <div class="card-header-custom">
+                            <div class="section-letter">G</div>
+                            <h3>Repository Github</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Kode project praktikum dapat diakses melalui repository Github berikut.</p>
+                            <a href="https://github.com/amelianiisrina/AplikasiMobile_KelasA/tree/pertemuan-05/Praktikum%205/prak5_appmob" class="btn-pink" target="_blank">
+                                <i class="bi bi-github"></i> Buka Github
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="container text-center mt-5">
+                        <a href="../apmob.html" class="btn-pink" target="_blank"><i class="bi bi-arrow-left"></i>BACK</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <h5>Niisrina Amelia</h5>
+                            <p>A computer science student who loves trying out new things and exploring creative ideas. Based in Padang, Indonesia.</p>
+                            <p style="font-size:0.82rem;">&copy; 2025 Niisrina Amelia. All rights reserved.</p>
+                        </div>
+
+                        <div class="col-6">
+                            <h5 class="text-center mb-4">Contact</h5>
+                            <div class="row justify-content-center g-3">
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://www.instagram.com/rnliea?igsh=ODRmOW8xZ2VuMGZ5" target="_blank" style="text-decoration: none;">
+                                        <i class="bi bi-instagram" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://id.linkedin.com/in/niisrina-amelia-41481531b" target="_blank" style="text-decoration: none;">
+                                        <i class="bi bi-linkedin" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="mailto:amelianiisrina@gmail.com" style="text-decoration: none;">
+                                        <i class="bi bi-envelope-at" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://discordapp.com/users/1295724095627067434" style="text-decoration: none;">
+                                        <i class="bi bi-discord" style="font-size: 40px"></i>
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+</body>
+</html>
+                            

@@ -332,3 +332,63 @@
             line-height: 22px;
             margin-right: 8px;
         }
+
+/* Settingan untuk Project AppMob */
+.project-file-card {
+    height: 100%;
+    padding: 24px 18px;
+    background: #fffafb;
+    border: 1px solid #f2dce4;
+    border-radius: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.25s ease;
+}
+
+.project-file-card:hover {
+    transform: translateY(-4px);
+    border-color: #e8a9bf;
+    box-shadow: 0 8px 22px rgba(190, 110, 140, 0.12);
+}
+
+.project-file-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: #fbe8ef;
+    color: #c45c83;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.project-file-card h6 {
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #493640;
+}
+
+.project-file-card p {
+    font-size: 13px;
+    color: #786873;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.project-file-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 220px;
+    padding: 11px 14px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+}
