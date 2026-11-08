@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Laporan Praktikum 6</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/CSS/custom.css">
+        <link rel="stylesheet" href="https://melive.ifportofolio.com/CSS/report.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <div class="navbar-brand d-flex align-items-center gap-2">
+                <img src="../images/logo.png" alt="logo" width="40" class="me-2">
+                <span>Laporan Praktikum 6</span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../portofolio.html">Projects</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../report.html">Report</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+        <header class="laprak-header text-center">
+            <div class="position-relative" style="z-index:1">
+                <div class="hero-badge">Aplikasi Mobile</div>
+                <h1>Laporan Praktikum 6</h1>
+                <p>State Management: setState() dan Provider</p>
+            </div>
+        </header>
+
+    <!-- Konten Utama -->
+        <section class="content-section">
+            <div class="container">
+                <div class="row g-4">
+
+                <!-- Daftar Isi -->
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="toc-sticky">
+                            <div class="toc-card">
+                                <div class="toc-title"><i class="bi bi-journal-bookmark-fill me-2" style="color:var(--rose-accent)"></i>Daftar Isi</div>
+                                <a class="toc-link" href="#pendahuluan">
+                                    <i class="bi bi-chevron-right"></i>A. Pendahuluan</a>
+                                <a class="toc-link" href="#tujuan">
+                                    <i class="bi bi-chevron-right"></i>B. Tujuan Praktikum</a>
+                                <a class="toc-link" href="#tools">
+                                    <i class="bi bi-chevron-right"></i>C. Alat & Tools</a>
+                                <a class="toc-link" href="#praktikum">
+                                    <i class="bi bi-chevron-right"></i>D. Pelaksanaan Praktikum</a>
+                                <a class="toc-link" href="#analisis">
+                                    <i class="bi bi-chevron-right"></i>E. Pertanyaan Analisis</a>
+                                <a class="toc-link" href="#latihan">
+                                    <i class="bi bi-chevron-right"></i>F. Latihan</a>
+                                <a class="toc-link" href="#github">
+                                    <i class="bi bi-chevron-right"></i>G. Repository Github</a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Materi -->
+                <div class="col-lg-9">
+
+                    <!-- A. Pendahuluan -->
+                    <div class="laprak-card" id="pendahuluan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">A</div>
+                            <h3>Pendahuluan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Praktikum ini membahas pengelolaan <strong>State</strong> pada aplikasi Flutter menggunakan <code>setState()</code> dan <strong>Provider</strong>.
+                                Materi meliputi konsep State sebagai data yang dapat berubah selama aplikasi berjalan dan memengaruhi tampilan antarmuka (UI). Selain itu,
+                                praktikum membahas perbedaan penggunaan <code>setState()</code> untuk mengelola state lokal pada satu widget dan Provider untuk mengelola
+                                state yang digunakan oleh beberapa widget atau halaman. Konsep tersebut diterapkan pada aplikasi ResepKu, seperti mengatur jumlah porsi pada
+                                halaman detail resep dan mengelola daftar resep favorit, sehingga perubahan data dapat ditampilkan secara otomatis pada aplikasi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- B. Tujuan -->
+                    <div class="laprak-card" id="tujuan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">B</div>
+                            <h3>Tujuan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="row g-3 mb-2">
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-sliders me-2" style="color:var(--rose-accent)"></i>Pengelolaan State Lokal</h6>
+                                    <p>Menerapkan <code>StatefulWidget</code> dan <code>SetState()</code> untuk mengelola perubahan jumlah porsi pada halaman detail resep.
+                                    </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-exclamation-circle me-2" style="color:var(--rose-accent)"></i>Keterbatasan State Lokal</h6>
+                                    <p>Memahami keterbatasan state lokal ketika data perlu digunakan dan diakses oleh beberapa widget atau halaman.
+                                    </p>
+                                    </div>
+                                </div>
+                                </div>
+                            <div class="row g-3 mb-2">
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-diagram me-2" style="color:var(--rose-accent)"></i>Penerapan State Global dengan Provider</h6>
+                                    <p>Menerapkan package Provider menggunakan <code>ChangeNotifier</code> dan <code>MultiProvider</code> untuk
+                                        mengelola daftar resep favorit secara global.
+                                    </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tugas-item h-100">
+                                    <h6><i class="bi bi-arrow-left-right me-2" style="color:var(--rose-accent)"></i>Penggunaan <code>context.watch</code>, <code>context.read</code>, dan <code>Consumer</code></h6>
+                                    <p>Menerapkan <code>context.watch</code>, <code>context.read</code>, dan <code>Consumer</code> untuk membaca serta mengakses perubahan state pada beberapa halaman aplikasi.
+                                    </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- C. Tools -->
+                    <div class="laprak-card" id="tools">
+                        <div class="card-header-custom">
+                            <div class="section-letter">C</div>
+                            <h3>Alat dan Tools yang Digunakan</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="pill-list">
+                                <div class="pill"><i class="bi bi-laptop"></i>Laptop</div>
+                                <div class="pill"><i class="bi bi-code-square"></i>Flutter SDK</div>
+                                <div class="pill"><i class="bi bi-code-slash"></i>VS Code</div>
+                                <div class="pill"><i class="bi bi-braces"></i>Dart</div>
+                                <div class="pill"><i class="bi bi-box-seam"></i>Package Provider</div>
+                                <div class="pill"><i class="bi bi-git"></i>GIT</div>
+                                <div class="pill"><i class="bi bi-google"></i>Google Chrome</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- D. Pelaksanaan Praktikum -->
+                    <div class="laprak-card" id="praktikum">
+
+                        <div class="card-header-custom">
+                            <div class="section-letter">D</div>
+                            <h3>Pelaksanaan Praktikum</h3>
+                        </div>
+
+                        <div class="card-body-custom step-content">
+
+                            <div class="checkpoint-section" id="checkpoint1">
+
+                                <div class="d-flex align-items-center gap-2 mb-2" style="scroll-margin-top:90px">
+                                    <span class="hero-badge mb-0">1</span>
+                                    <h5 class="mb-0" style="font-family: 'Playfair Display',serif;font-weight:700;">
+                                        Checkpoint 1 (Bagian A)
+                                    </h5>
+                                </div>
+
+                                <div class="step-item">
+                                    <div class="step-num">a</div>
+                                    <div class="step-content">
+                                        <h5>Halaman Detail Classic Margherita Piza</h5>
+                                        <p>Menampilkan halaman detail resep dengan porsi 6 menghasilkan 1800 kkal.</p>
+                                        <img src="../images/gambar198.png" class="laprak-img" alt="Porsi 6 dengan 1800 kkal.">
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-num">b</div>
+                                    <div class="step-content">
+                                        <h5>Pengaturan Jumlah Porsi</h5>
+                                        <p>Menampilkan tombol <strong>-</strong> tidak aktif ketika porsi bernilai 1 dan baris 
+                                            kode yang menyebabkan hal tersebut.</p>
+                                        <img src="../images/gambar199.png" class="laprak-img" alt="Tombol - tidak aktif ketika porsi bernilai 1.">
+                                        <p>Baris kode yang menyebabkan tombol tidak aktif adalah berikut.</p>
+                                        <img src="../images/gambar200.png" class="laprak-img" alt="Baris kode yang menyebabkan tombol - tidak aktif."">
+                                    </div>
+                                </div>
+
+                                <hr style="border: none; border-top: 1px solid #00000084; margin: 20px 20px;">
+
+                            </div>
+
+                            <div class="checkpoint-section" id="pengamatan">
+
+                                <div class="d-flex align-items-center gap-2 mb-2" style="scroll-margin-top:90px">
+                                    <span class="hero-badge mb-0">2</span>
+                                    <h5 class="mb-0" style="font-family: 'Playfair Display',serif;font-weight:700;">
+                                        Pengamatan Bagian B
+                                    </h5>
+                                </div>
+
+                                <div class="step-item">
+                                    <div class="step-num">a</div>
+                                    <div class="step-content">
+                                        <h5>Apa ikon hati berubah? Mengapa?</h5>
+                                        <p>Ikon hati berubah ketika ditekan karena nilai <code>_isFavorite</code> diubah menggunakan <code>setState()</code>.
+                                            Jika nilainya <code>true</code>, ikon menjadi hati berwarna merah, sedangkan jika <code>false</code>, ikon kembali menjadi
+                                            hati kosong.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-num">b</div>
+                                    <div class="step-content">
+                                        <h5>Coba tampilkan jumlah resep favorit di judul AppBar HomePage. Apakah hal itu dapat dilakukan? Di class mana data <code>_isFavorite</code>
+                                            berada, dan apakah HomePage dapat membacanya?</h5>
+                                        <p>Jumlah resep favorit sebenarnya bisa ditampilkan di AppBar HomePage, tetapi tidak dapat dilakukan secara langsung dengan kode saat ini.
+                                            Variabel <code>_isFavorite</code> berada di dalam class <code>_RecipeTileState</code>, sehingga HomePage tidak dapat membaca status favorit
+                                            setiap resep secara langsung.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-num">c</div>
+                                    <div class="step-content">
+                                        <h5>Buka halaman detail dari resep yang sudah difavoritkan. Bagaimana halaman detail dapat mengetahui bahwa resep tersebut favorit?</h5>
+                                        <p>Halaman detail belum dapat mengetahui status favorit resep karena saat membuka DetailPage, kode hanya mengirimkan data resep melalui
+                                            parameter <code>recipe</code>, tanpa mengirimkan nilai <code>_isFavorite</code>.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <hr style="border: none; border-top: 1px solid #00000084; margin: 20px 20px;">
+
+                            </div>
+
+                            <div class="checkpoint-section" id="checkpoint2">
+
+                                <div class="d-flex align-items-center gap-2 mb-2" style="scroll-margin-top:90px">
+                                    <span class="hero-badge mb-0">3</span>
+                                    <h5 class="mb-0" style="font-family: 'Playfair Display',serif;font-weight:700;">
+                                        Checkpoint 2
+                                    </h5>
+                                </div>
+
+                                <h5>Uji Skenario</h5>
+                                    <table class="laprak-table">
+                                        <thead>
+                                            <tr><th>Skenario</th><th>Hasil yang Diharapkan</th><th>Kesesuaian</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tap ikon hati pada Margherita dan Alfredo di Home</td>
+                                                <td>Ikon berwarna merah, badge menunjukkan angka 2</td>
+                                                <td><img src="../images/gambar201.png" class="laprak-img" alt="Skenario 1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Buka detail Margherita</td>
+                                                <td>Ikon hati di AppBar terisi</td>
+                                                <td><img src="../images/gambar202.png" class="laprak-img" alt="Skenario 2"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Di halaman detail, tap ikon hati, lalu kembali ke home</td>
+                                                <td>Ikon Margherita kosong, badge menunjukkan angka 1</td>
+                                                <td>
+                                                    <div class="row g-3 mb-4">
+                                                        <div class="col-md-6">
+                                                            <img src="../images/gambar203.png" class="laprak-img" alt="Skenario 3">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <img src="../images/gambar204.png" class="laprak-img" alt="Skenario 3">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tap badge di AppBar</td>
+                                                <td>Halaman Favorit hanya berisi Alfredo</td>  
+                                                <td><img src="../images/gambar205.png" class="laprak-img" alt="Skenario 4"></td>                                    
+                                            </tr>
+                                            <tr>
+                                                <td>Hapus Alfredo dari halaman Favorit, lalu kembali</td>
+                                                <td>Muncul pesan "Belum ada resep favorit", badge hilang</td>
+                                                <td>
+                                                    <div class="row g-3 mb-4">
+                                                        <div class="col-md-6">
+                                                            <img src="../images/gambar206.png" class="laprak-img" alt="Skenario 5">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <img src="../images/gambar207.png" class="laprak-img" alt="Skenario 5">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ubah porsi menjadi 2, kembali ke Home, lalu buka lagi resep yang sama</td>
+                                                <td>Porsi kembali ke nilai awal, karena state lokal ikut dibuang ketika halaman ditutup</td>
+                                                <td>
+                                                    <div class="row g-3 mb-4">
+                                                        <div class="col-md-6">
+                                                            <img src="../images/gambar208.png" class="laprak-img" alt="Skenario 6">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <img src="../images/gambar209.png" class="laprak-img" alt="Skenario 6">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                            </div>                           
+                        </div>
+                    </div>
+                    
+                    <!-- E. Pertanyaan Analisis -->
+                    <div class="laprak-card" id="analisis">
+                        <div class="card-header-custom">
+                            <div class="section-letter">E</div>
+                            <h3>Pertanyaan Analisis</h3>
+                        </div>
+
+                        <div class="card-body-custom step-content">
+
+                            <div class="step-item">
+                                <div class="step-num">1</div>
+                                <div class="step-content">
+                                    <h5>Tuliskan jawaban tiga pertanyaan pada Langkah B.2, lengkap dengan alasannya.</h5>
+                                    <p>a. Pertanyaan 1: ikon hati berubah ketika ditekan karena nilai <code>_isFavorite</code> diubah
+                                            menggunakan <code>setState()</code>. Jika nilainya <code>true</code>, ikon menjadi hati berwarna 
+                                            merah, sedangkan jika <code>false</code>, ikon kembali menjadi hati kosong.</p>
+                                    <p>b. Pertanyaan 2: jumlah resep favorit sebenarnya bisa ditampilkan di AppBar HomePage, tetapi tidak dapat
+                                            dilakukan secara langsung dengan kode saat ini. Variabel <code>_isFavorite</code> berada di dalam
+                                            class <code>_RecipeTileState</code>, sehingga HomePage tidak dapat membaca status favorit setiap resep
+                                            secara langsung.</p>
+                                    <p>c. Pertanyaan 3: halaman detail belum dapat mengetahui status favorit resep karena saat membuka DetailPage, 
+                                            kode hanya mengirimkan data resep melalui parameter <code>recipe</code>, tanpa mengirimkan nilai 
+                                            <code>_isFavorite</code>.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">2</div>
+                                <div class="step-content">
+                                    <h5>Mengapa jumlah porsi tetap menggunakan <code>setState()</code> dan tidak dimasukkan ke Provider? Hubungkan
+                                            jawaban dengan hasil skenario 6 pada Langkah C.7.</h5>
+                                    <p>Jumlah porsi tetap menggunakan <code>setState()</code> karena data tersebut hanya dibutuhkan sementara pada
+                                            halaman detail resep dan tidak perlu dibagikan ke halaman lain. Hal ini dibuktikan pada skenario 6, 
+                                            ketika porsi diubah menjadi 2 lalu kembali ke Home dan membuka resep yang sama, jumlah porsi kembali ke 
+                                            nilai awal karena state lokal ikut hilang ketika halaman ditutup. Oleh karena itu, penggunaan <code>setState()</code> 
+                                            sudah cukup untuk mengelola jumlah porsi.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">3</div>
+                                <div class="step-content">
+                                    <h5>Pindahkan <code>ChangeNotifierProvider</code> dari <code>main()</code> ke dalam HomePage (membungkus Scaffold). Apa 
+                                            yang terjadi ketika halaman Favorit dibuka? Jelaskan penyebabnya berdasarkan posisi provider di widget tree.
+                                            Setelah itu, kembalikan kodenya seperti pemula.</h5>
+                                    <p>Ketika halaman Favorit dibuka, aplikasi dapat mengalami error <code>ProviderNotFoundException</code> karena 
+                                            halaman Favorit tidak dapat menemukan Provider. Hal ini terjadi karena Provider hanya dapat diakses oleh widget yang
+                                            berada di bawahnya dalam widget tree. Jika Provider dipindahkan ke HomePage, halaman lain yang berada 
+                                            di luar HomePage tidak dapat mengakses data tersebut. Oleh karena itu, Provider perlu dikembalikan ke <code>main()</code> 
+                                            agar dapat digunakan oleh seluruh halaman aplikasi.</p>
+                                    <img src="../images/gambar210.png" class="laprak-img" alt="ProviderNotFoundException">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- F. Latihan -->
+                    <div class="laprak-card" id="latihan">
+                        <div class="card-header-custom">
+                            <div class="section-letter">F</div>
+                            <h3>Latihan</h3>
+                        </div>
+
+                        <div class="card-body-custom step-content">
+
+                            <div class="step-item">
+                                <div class="step-num">1</div>
+                                <div class="step-content">
+                                    <h5>Latihan 1</h5>
+                                    <p>Menambahkan halaman Pengaturan yang berisi SwitchListTile 'Mode Gelap'. Ketika switch diaktifkan, 
+                                        seluruh aplikasi berubah ke tema gelap.
+                                    </p>
+                                    <table class="laprak-table">
+                                        <thead>
+                                            <tr><th>File Program</th><th>Dokumentasi Kode Program</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>theme_provider.dart</code></td>
+                                                <td><img src="../images/gambar211.png" class="laprak-img" alt="theme_provider.dart"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>main.dart</code></td>
+                                                <td><img src="../images/gambar212.png" class="laprak-img" alt="main.dart"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>settings_page.dart</code></td>
+                                                <td><img src="../images/gambar213.png" class="laprak-img" alt="settings_page.dart"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>home_page.dart</code></td>
+                                                <td><img src="../images/gambar214.png" class="laprak-img" alt="home_page.dart"></td>                                        
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>Berikut merupakan hasil implementasi fitur tema gelap pada aplikasi ResepKu. Pengguna dapat mengaktifkan mode
+                                        gelap melalui SwitchListTile pada halaman Pengaturan. Setelah switch diaktifkan, tampilan seluruh aplikasi akan
+                                        berubah menjadi tema gelap.
+                                    </p>
+                                    <div class="row g-3 mb-2">
+                                        <div class="col-md-6">
+                                            <img src="../images/gambar215.png" class="laprak-img" alt="SwitchListTile Mode Gelap pada Halaman Pengaturan.">
+                                            <p class="text-center">SwitchListTile Mode Gelap pada Halaman Pengaturan</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <img src="../images/gambar216.png" class="laprak-img" alt="Tampilan Aplikasi ResepKu Setelah Mode Gelap Diaktifkan.">
+                                            <p class="text-center">Tampilan Aplikasi ResepKu Setelah Mode Gelap Diaktifkan.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-item">
+                                <div class="step-num">2</div>
+                                <div class="step-content">
+                                    <h5>Latihan 2</h5>
+                                    <p>Menambahkan tombol 'Hapus semua' di AppBar halaman Favorit, yang memanggil <code>clear()</code> dari <code>FavoriteProvider</code>
+                                        setelah pengguna mengonfirmasi melalui <code>AlertDialog</code>. Tombol harus nonaktif ketika daftar favorit kosong.</p>
+                                    <table class="laprak-table">
+                                        <thead>
+                                            <tr><th>File Program</th><th>Dokumentasi Kode Program</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>favorite_provider.dart</code></td>
+                                                <td><img src="../images/gambar217.png" class="laprak-img" alt="favorite_provider.dart"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>favorite_page.dart</code></td>
+                                                <td><img src="../images/gambar218.png" class="laprak-img" alt="favorite_page.dart"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>Berikut merupakan hasil implementasi fitur Hapus Semua Favorit pada aplikasi ResepKu. Fitur ini memungkinkan pengguna untuk 
+                                        menghapus seluruh resep favorit melalui konfirmasi terlebih dahulu. Setelah semua favorit berhasil dihapus, tombol 
+                                        Hapus semua akan menjadi nonaktif.
+                                    </p>
+                                    <div class="row g-3 mb-2">
+                                        <div class="col-md-4">
+                                            <img src="../images/gambar219.png" class="laprak-img" alt="Tombol Hapus Semua pada Halaman Favorit.">
+                                            <p class="text-center">Tombol Hapus Semua pada Halaman Favorit.</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <img src="../images/gambar220.png" class="laprak-img" alt="AlertDialog Konfirmasi Penghapusan Favorit">
+                                            <p class="text-center">AlertDialog Konfirmasi Penghapusan Favorit.</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <img src="../images/gambar221.png" class="laprak-img" alt="Tampilan Aplikasi ResepKu Setelah Mode Gelap Diaktifkan.">
+                                            <p class="text-center">Tampilan Aplikasi ResepKu Setelah Mode Gelap Diaktifkan.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!-- G. Repository Github -->
+                    <div class="laprak-card" id="github">
+                        <div class="card-header-custom">
+                            <div class="section-letter">G</div>
+                            <h3>Repository Github</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Kode project praktikum dapat diakses melalui repository Github berikut.</p>
+                            <a href="https://github.com/amelianiisrina/2411532009_KelasA_AppMob_ResepKu" class="btn-pink" target="_blank">
+                                <i class="bi bi-github"></i> Buka Github
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="container text-center mt-5">
+                        <a href="../apmob.html" class="btn-pink" target="_blank"><i class="bi bi-arrow-left"></i>BACK</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <h5>Niisrina Amelia</h5>
+                            <p>A computer science student who loves trying out new things and exploring creative ideas. Based in Padang, Indonesia.</p>
+                            <p style="font-size:0.82rem;">&copy; 2025 Niisrina Amelia. All rights reserved.</p>
+                        </div>
+
+                        <div class="col-6">
+                            <h5 class="text-center mb-4">Contact</h5>
+                            <div class="row justify-content-center g-3">
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://www.instagram.com/rnliea?igsh=ODRmOW8xZ2VuMGZ5" target="_blank" style="text-decoration: none;">
+                                        <i class="bi bi-instagram" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://id.linkedin.com/in/niisrina-amelia-41481531b" target="_blank" style="text-decoration: none;">
+                                        <i class="bi bi-linkedin" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="mailto:amelianiisrina@gmail.com" style="text-decoration: none;">
+                                        <i class="bi bi-envelope-at" style="font-size: 40px"></i>
+                                    </a>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-center contact-icon">
+                                    <a href="https://discordapp.com/users/1295724095627067434" style="text-decoration: none;">
+                                        <i class="bi bi-discord" style="font-size: 40px"></i>
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+</body>
+</html>
+                            

@@ -392,3 +392,31 @@
     text-decoration: none;
     border-radius: 10px;
 }
+
+.checkpoint-section {
+    margin: 28px 0 32px 12px;
+    padding-left: 20px;
+    border-left: 2px solid #eadde5;
+}
+
+.checkpoint-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.checkpoint-header h4 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.checkpoint-header p {
+    margin: 2px 0 0;
+    font-size: 13px;
+    color: #888;
+}
+
+.checkpoint-steps {
+    margin-left: 12px;
+}
